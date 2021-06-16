@@ -1,0 +1,116 @@
+.projects {
+  &.page-wrapper {
+    box-sizing: border-box;
+    width: 765px;
+    margin: 0 auto;
+    @media screen and (max-width: 1280px) {
+      width: 765px;
+    }
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.projects__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 35px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 50px;
+  }
+}
+
+.projects__header .inner-page__title {
+  margin-bottom: 0;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.projects__list {
+  @include reset-list;
+
+  &--hide {
+    display: none;
+  }
+}
+
+.projects .project {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  & a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.project__text {
+  width: 464px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+
+.project__type {
+  display: inline-block;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  background-color: $green;
+}
+
+.project__type--closed {
+  background-color: $middle-grey;
+}
+
+.project__title {
+  @include reset;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: $black;
+}
+
+.project__description {
+  @include reset;
+  color: $black;
+}
+
+.project__img,
+.project__img img,
+.project__img picture {
+  width: 262px;
+  @media screen and (max-width: 767px) {
+    width: 220px;
+    align-self: flex-start;
+  }
+}
+
+.project__img {
+  border-radius: 5px;
+  flex-shrink: 0;
+  overflow: hidden;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}

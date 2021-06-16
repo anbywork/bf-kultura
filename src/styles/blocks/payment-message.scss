@@ -1,0 +1,75 @@
+
+.payment-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: calc(100vh - 80px - 200px);
+}
+
+.payment-message__wrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 464px;
+  box-sizing: border-box;
+  padding:50px;
+  margin: auto;
+  border: 1px solid #3276CF;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 15px;
+  min-height: 420px;
+  @media screen and (max-width: 480px){
+    width: 100%;
+    padding: 30px;
+
+  }
+}
+
+.payment-message__title {
+  @include reset;
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 32px;
+  text-align: center;
+  color: $green;
+  width: 100%;
+  @media screen and (max-width: 480px) {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+
+.payment-message__text {
+  @include reset;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.payment-message__btn {
+  width: 243px;
+}
+
+.payment-message--error {
+  & .payment-message__wrapper {
+    border-color: $orange;
+  }
+  & .payment-message__title {
+    color: $orange;
+  }
+}
+
+
+.payment-message__caption {
+  @include reset;
+  width: 100%;
+  margin-top: 60px;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+}

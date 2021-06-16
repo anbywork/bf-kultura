@@ -1,0 +1,70 @@
+<form action="" method="post" class="form form-payment">
+  <div class="form-payment__text-field">
+    <label><input type="text" class="form__input form-payment__input" id="fio" placeholder="ФИО *" required minlength="4" pattern=""></label>
+    <label><input type="email" class="form__input form-payment__input" name="email" placeholder="Email (пришлем чек) *" required></label>
+    <label class="form__select-label">
+      <span class="visually-hidden">На что вы хотите пожертвовать</span>
+      <select class="form__select form-payment__select" name="description">
+        <option value="Благотворительное пожертвование на уставную деятельность">На уставную деятельность</option>
+        <option value="Благотворительное пожертвование на программу «Домашний репетитор»">На программу «Домашний репетитор»</option>
+      </select>
+    </label>
+  </div>
+  <div class="form-payment__right">
+    <div class="form-payment__amount-value-and-input">
+      <ul class="form-payment__amount-value">
+        <li>
+          <label>
+            <input type="radio" class="visually-hidden" name="amount-value" value="100">
+            <span class="form__label-btn"><span class="rouble">100</span></span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" class="visually-hidden" name="amount-value" value="300" checked>
+            <span class="form__label-btn"><span class="rouble">300</span></span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" class="visually-hidden" name="amount-value" value="500">
+            <span class="form__label-btn"><span class="rouble">500</span></span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" class="visually-hidden" name="amount-value" value="700">
+            <span class="form__label-btn"><span class="rouble">700</span></span>
+          </label>
+        </li>
+      </ul>
+      <label>
+        <input class="form__number form-payment__amount-input" type="number" name="amountAnother" placeholder="Другая сумма" min="1">
+      </label>
+    </div>
+    <div class="form-payment__btn-caption">
+      <div class="form-payment__btn-row">
+        <button class="form-payment__btn-submit btn" type="submit">Помочь</button>
+        <label class="form__checkbox form-payment__checkbox">
+          <input type="checkbox" class="visually-hidden" name="recurring_period" value="1">
+          <span class="form__checkbox-indicator"></span>
+          <span class="form__checkbox-label">Ежемесячно</span>
+        </label>
+        <section class="form-payment__methods">
+          <h2 class="visually-hidden">Принимаем платежи</h2>
+          <img src="/img/ps-signs.svg" alt="Visa, Master Card, МИР, Apple Pay, Google Pay" width="235" height="21">
+        </section>
+      </div>
+      <p class="form-payment__caption">Нажимая на&nbsp;кнопку &laquo;Хочу помочь&raquo;, вы&nbsp;соглашаетесь <a class="link link--privacy-policy" href="privacy-policy.html" target="_blank">c&nbsp;политикой обработки персональных данных</a>, <a class="link link--payment-policy" href="safety-policy.html" target="_blank">политикой безопасности платежей</a> и&nbsp;<a class="link link--offer" href="offer.html" target="_blank">условиями оферты</a></p>
+    </div>
+
+  </div>
+  <input type="text" hidden name="amount">
+  <input type="text" hidden name="first_name">
+  <input type="text" hidden name="last_name">
+  <input type="text" hidden name="patronymic">
+  <input type="text" hidden name="currency" value="643">
+  <input type="text" hidden name="reference" value="1">
+  <input type="text" hidden name="remind_days_before" value="2">
+
+</form>

@@ -1,0 +1,50 @@
+.about-structure__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.about-structure__list-item {
+  width: 404px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: $light-grey;
+
+  @include reset;
+  width: 404px;
+  @media screen and (max-width: 1200px){
+    flex-shrink: 1;
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  &:first-child {
+    @media screen and (max-width: 1200px) {
+      margin-right: 40px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+    }
+  }
+}
+
+.about-structure__list-item header {
+
+  padding: 20px;
+  border-bottom: 1px solid rgba($middle-grey, 0.5);
+
+}
+
+.about-structure__list-item h3 {
+  @include reset;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+

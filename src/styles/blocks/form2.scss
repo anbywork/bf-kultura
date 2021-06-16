@@ -1,0 +1,121 @@
+
+.form2 label {
+  display: flex;
+  flex-direction: column;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.form2__label {
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba($black, 0.7);
+}
+
+.form2__input {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba($middle-grey, 0.5);
+  font: inherit;
+  &::placeholder {
+    color: $middle-grey;
+  }
+}
+
+.form2__textarea {
+  box-sizing: border-box;
+  min-height: 200px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba($middle-grey, 0.5);
+  font: inherit;
+  resize: none;
+  @media screen and (max-width: 380px) {
+    min-height: auto;
+    height: 80px;
+  }
+  &::placeholder {
+    color: $middle-grey;
+  }
+}
+
+.form2__textarea {
+  margin-bottom: 20px;
+}
+
+.form2 .btn {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form2__caption {
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba($black, 0.8);
+}
+
+
+.form2__upload-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 134px 30px 30px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px dashed $middle-grey;
+  text-align: center;
+  background-color: rgba($green, 0.05);
+  transition: opacity ease-in-out 300ms;
+  &--focus {
+    border: 1px dashed $green;
+    background-color: rgba($green, 0.1);
+  }
+
+  &::after{
+    position: absolute;
+    content: '';
+    transform: translateX(-50%);
+    left: 50%;
+    top: 50px;
+    width: 72px;
+    height: 54px;
+    background-image: url("/img/sprite.svg");
+    background-position: -209px -1px;
+  }
+}
+
+.form2__upload-file-input {
+
+}
+
+.form2__btn-submit {
+  margin-top: 10px;
+}
+
+.form2__uploaded-file-list,
+.form2 .form2__uploaded-file-list {
+  @include reset-list;
+  margin-bottom: 20px;
+}
+
+.form2__uploaded-file {
+  box-shadow: 0px 0px 11px rgba($green, 0.11);
+  &:first-child {
+    margin-top: 10px;
+  }
+  &.doc:hover,
+  &.doc:focus {
+    background-color: white;
+  }
+}
+
+
+
+

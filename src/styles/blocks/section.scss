@@ -1,0 +1,26 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  @media screen and (max-width: 480px){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @media screen and (max-width: 320px){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.section__title {
+  @include reset;
+  font-size: 36px;
+  line-height: 40px;
+  font-width: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #000;
+}
+
+.section--form-payment {
+  background-color: #C5DAEF;
+}

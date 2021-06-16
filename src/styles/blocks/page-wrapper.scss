@@ -1,0 +1,21 @@
+.page-wrapper {
+  box-sizing: border-box;
+  width: 1170px;
+  margin: 0 auto;
+  @media screen and (max-width:1280px) {
+    width: 960px;
+  }
+  @media screen and (max-width:1023px) {
+    width: 700px;
+  }
+  @media screen and (max-width: 767px){
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media screen and (max-width: 350px){
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

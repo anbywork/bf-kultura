@@ -1,0 +1,51 @@
+.social {
+  @include reset-list;
+  display: none;
+  //display: flex;
+  flex-direction: row;
+}
+
+.social__item {
+  @include reset;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-link {
+  display: block;
+  box-sizing: border-box;
+  padding: 6px;
+  width: 36px;
+  height: 36px;
+  color: $white;
+  background-image: url("/img/sprite.svg");
+  background-repeat: no-repeat;
+}
+
+.social-link--light {
+  background-position-y: -129px;
+  border: 1px solid rgba($white, 0);
+  &:hover {
+    background-position-y: -158px;
+  }
+}
+
+.social-link--insta {
+  background-position-x: 5px;
+}
+
+.social-link--vk {
+  background-position-x: -127px;
+}
+
+.social-link--fb {
+  background-position-x: -39px;
+}
+
+.social-link--ok {
+  background-position-x: -83px;
+}
+
+

@@ -1,0 +1,178 @@
+.simple-text-page {
+  &.page-wrapper {
+    box-sizing: border-box;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    width: 563px;
+    margin: 0 auto;
+    min-height: calc(100vh - 265px);
+    @media screen and (max-width: 766px){
+      width: 100%;
+      padding-top: 130px;
+      padding-bottom: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media screen and (max-width: 350px){
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 120px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.simple-text-page__hero {
+  margin-bottom: 30px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.simple-text-page__title {
+  @include reset;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 30px;
+  @media screen and (max-width: 370px) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+
+.section-text {
+  margin-top: 30px;
+}
+
+
+h1 + p {
+
+}
+
+h2 {
+  @include reset;
+  margin-top: 40px;
+}
+
+p + h2 {
+  margin-top: 30px;
+}
+
+h3 {
+  @include reset-list;
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+
+h2 + h3 {
+  margin-top: 30px;
+}
+
+li > h4 {
+  @include reset;
+  margin-bottom: 5px;
+}
+
+
+p {
+  @include reset;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+h2 + p {
+  margin-top: 15px;
+}
+
+
+p + p {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+ul + p,
+ol + p {
+  margin-top: 40px;
+}
+
+li > p {
+  @include reset;
+}
+
+li > p + p {
+  margin-top: 10px;
+}
+
+ul,
+ol {
+  @include reset;
+  margin-top: 15px;
+  margin-left: 18px;
+}
+
+h2 + ul,
+h2 + ol {
+  margin-top: 30px;
+}
+
+h3 + ul,
+h3 + ol {
+  margin-top: 15px;
+}
+
+p + ol,
+p + ul {
+  margin-top: 10px;
+}
+
+
+li {
+  @include reset;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+ol li {
+  padding-left: 10px;
+}
+
+
+table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+tr {
+  @media screen and (max-width:767px){
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+tr:nth-child(2n+1) > td {
+  background-color: rgba($light-grey, 0.8);
+}
+
+td {
+  @include reset;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  @media screen and (max-width:767px){
+    padding-bottom: 5px;
+    &:last-child {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+td + td {
+
+}

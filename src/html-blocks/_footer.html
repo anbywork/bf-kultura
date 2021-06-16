@@ -1,0 +1,88 @@
+<footer class="footer">
+  <div class="page-wrapper">
+    <div class="footer__logo-docs">
+      <a class="footer__logo" href="index.html">
+        <img src="/img/logo-white.svg" width="160" height="34" alt="Логотип Благотворительного фонда Восточный">
+      </a>
+      <ul class="footer__docs footer-docs">
+        <li class="footer-docs__item"><a href="/offer.html" target="_blank">Оферта</a></li>
+        <li class="footer-docs__item"><a href="/privacy-policy.html" target="_blank">Политика конфиденциальности</a></li>
+        <li class="footer-docs__item"><a href="/safety-policy.html" target="_blank">Политика безопасности платежей</a></li>
+      </ul>
+    </div>
+    <div class="footer__details-and-contacts">
+      <ul class="footer__company-details footer-company-details">
+        <li class="footer-company-details__item">ОГРН 1102700000897</li>
+        <li class="footer-company-details__item">ИНН 2721176340</li>
+        <li class="footer-company-details__item">КПП 272101001</li>
+      </ul>
+
+      <section class="footer__contacts">
+        <h2 class="visually-hidden">Контактное лицо</h2>
+        <p>Турышева Елена Владимировна</p>
+        <p>председатель правления фонда</p>
+        <a href="mailto:evturysheva@vostbank.ru" target="_blank">evturysheva@vostbank.ru</a>
+      </section>
+    </div>
+
+    <div class="footer__btn-and-social">
+      <button class="footer__feedback-btn btn btn--light" type="button">Написать нам</button>
+      <ul class="footer__social social">
+        <li class="footer__social-item social__item">
+          <a class="social-link social-link--light social-link--insta" href="https://instagram.com/vostfond" target="_blank">
+            <span class="visually-hidden">Мы в Instagram</span>
+          </a>
+        </li>
+        <li class="footer__social-item social__item">
+          <a class="social-link social-link--light social-link--vk" href="https://vk.com/vostfond" target="_blank">
+            <span class="visually-hidden">Мы Вконтакте</span>
+          </a>
+        </li>
+        <li class="footer__social-item social__item">
+          <a class="social-link social-link--light social-link--ok" href="https://ok.ru/vostfond" target="_blank">
+            <span class="visually-hidden">Мы в Одноклассниках</span>
+          </a>
+        </li>
+        <li class="footer__social-item social__item">
+          <a class="social-link social-link--light social-link--fb" href="https://facebook.com/vostfond" target="_blank">
+            <span class="visually-hidden">Мы на Facebook</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</footer>
+<section class="popup popup-feedback popup__form popup--hide">
+  <div class="popup__bg"></div>
+  <div class="popup__wrapper">
+    <button class="popup__close-btn">Закрыть</button>
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <form class="popup-feedback__form form2" action="" method="post">
+      <label for="email">
+        <span class="form2__label">Email*</span>
+        <input class="form2__input" id="email" name="email" type="email" placeholder="Куда прислать ответ по вашему вопросу?" required>
+      </label>
+      <label for="name">
+        <span class="form2__label">Имя*</span>
+        <input class="form2__input" id="name" name="name" type="text" maxlength="50" minlength="2" placeholder="Как к вам обращаться" required>
+      </label>
+      <label>
+        <span class="form2__label">Сообщение*</span>
+        <textarea class="form2__textarea" name="message" placeholder="О чем вы хотите спросить?" rows="5" required></textarea>
+      </label>
+      <button class="btn btn--bright" type="submit">Отправить сообщение</button>
+      <p class="form2__caption">Нажимая на кнопку «Отправить сообщение», вы&nbsp;соглашаетесь <a class="link" href="privacy-policy.html" target="_blank">c&nbsp;политикой
+        обработки персональных данных</a>.</p>
+    </form>
+    <section class="message__wrapper message__wrapper--success message__wrapper--hide">
+      <h2>Ваше сообщение успешно отправлено</h2>
+      <p>Мы отправим ответ на указанный email в ближайшее время</p>
+    </section>
+    <section class="message__wrapper message__wrapper--error message__wrapper--hide">
+      <h2>Что-то пошло&nbsp;не&nbsp;так</h2>
+      <p><button class="message__hide-btn link" type="button">Попробуйте еще раз</button> или <a target="_blank" href="/about.html#contacts">свяжитесь с&nbsp;нами другим способом</a></p>
+    </section>
+  </div>
+</section>

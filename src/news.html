@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3276cf">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="/fonts/plumb-black.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/plumb-black.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/Plumb-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Plumb-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/plumb-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/plumb-medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/Plumb-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Plumb-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/plumb-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/plumb-light.woff" as="font" type="font/woff" crossorigin>
+
+
+  <link rel="preload" href="/styles/main.min.css" as="style">
+  <link rel="stylesheet" href="/styles/main.min.css">
+  <title>Новости — Благотворительный фонд Восточный</title>
+
+</head>
+<body>
+@@include('html-blocks/_header-news.html')
+<main class="inner-page news page-wrapper">
+  <h1 class="inner-page__title">Новости</h1>
+  <ul class="news__list">
+    <li class="news__item news-item">
+      <a href="/content-pages/news/domashniy-repetitor.html">
+        <div class="news-item__text">
+          <p class="news-item__date">06 сентября 2020</p>
+          <h2 class="news-item__title">Домашний репетитор — новая благотворительная программа для подростков-воспитанников детских домов</h2>
+          <p class="news-item__description">Программа представляет подросткам доступ к онлайн-занятиям с репетиторами по&nbsp;основным школьным предметам.</p>
+        </div>
+        <div class="content-img news-item__img">
+          <img src="/img/content/news/new-1.jpg" alt="">
+        </div>
+      </a>
+    </li>
+    <li class="news__item news-item">
+      <a href="/content-pages/news/podarite-detyam-obrazovanie.html">
+        <div class="news-item__text">
+          <time class="news-item__date">20 августа 2020</time>
+          <h2 class="news-item__title">Подарите детям образование</h2>
+          <p class="news-item__description">Пожертвуйте на качественное образование для воспитанников детских домов.</p>
+        </div>
+        <div class="content-img news-item__img">
+          <img src="/img/content/news/news-2.jpg" alt="">
+        </div>
+      </a>
+    </li>
+    <li class="news__item news-item">
+      <a href="/content-pages/news/nam-10-let.html">
+        <div class="news-item__text">
+          <p class="news-item__date">1 августа 2020</p>
+          <h2 class="news-item__title">Нам 10 лет!</h2>
+          <p class="news-item__description">Благотворительный фонд «Восточный» отметил 10-летие своей работы.
+            За годы работы фонд оказал помощь более 2000 детей по всей стране на сумму свыше 78&nbsp;млн&nbsp;рублей. </p>
+        </div>
+        <div class="content-img news-item__img">
+          <img src="/img/content/news/news-3.jpg" alt="">
+        </div>
+      </a>
+    </li>
+  </ul>
+  <div class="news__message news__message--hide news__message--end">
+    Больше новостей нет
+  </div>
+  <div class="news__message news__message--hide news__message--error">
+    Ошибка загрузки новостей, возможно нет подключения к интернету.
+    <button class="news__message-btn news__message-btn--error">Попробовать еще раз</button>
+  </div>
+  <template id="news-item-template">
+    <li class="news__item news-item">
+      <a href="">
+        <div class="news-item__text">
+          <p class="news-item__date"></p>
+          <h2 class="news-item__title"></h2>
+          <p class="news-item__description"></p>
+        </div>
+        <div class="content-img news-item__img">
+          <img src="#" alt="">
+        </div>
+      </a>
+    </li>
+  </template>
+
+</main>
+@@include('html-blocks/_footer.html')
+<script src="js/script.min.js"></script>
+</body>
+</html>

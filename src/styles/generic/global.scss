@@ -1,0 +1,112 @@
+@mixin reset() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list() {
+  @include reset;
+  list-style: none;
+}
+
+body {
+  @include reset;
+  font-family: Plumb, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+  background: radial-gradient(51.25% 101.35% at 7.19% 44.43%, #EBF8FF 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(100% 197.75% at 100% 0%, rgba(241, 234, 255, 0.958333) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  background-blend-mode: multiply, normal, normal;
+}
+
+
+main {
+  padding-top: 80px;
+  @media screen and (max-width: 767px){
+    //padding-top: 0;
+  }
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+picture {
+  display: block;
+}
+
+a,
+.link {
+  text-decoration: none;
+  transition: background-color ease-in-out 300ms,
+  color ease-in-out 300ms;
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $blue;
+  }
+  &:focus {
+    outline-color: $green;
+    outline-width: 1px;
+    color: $blue;
+  }
+  &:active {
+    color: $green;
+  }
+
+}
+
+.link {
+  color: $green;
+}
+
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+
+
+
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.rouble {
+  display: flex;
+  position: relative;
+  padding-right: 12px;
+  &::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 4px;
+    width: 9px;
+    height: 12px;
+    background-image: url("/img/sprite.svg");
+    background-repeat: no-repeat;
+    background-position: -168px 0;
+  }
+}

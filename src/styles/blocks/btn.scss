@@ -1,0 +1,77 @@
+.btn,
+a.btn {
+  font: inherit;
+  display: block;
+  box-sizing: border-box;
+  padding: 15px 15px 15px;
+  border-radius: 8px;
+  border: none;
+  min-width: 150px;
+  min-height: 50px;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
+  background-color: $blue;
+  transition: background-color ease-in-out 300ms,
+  color ease-in-out 300ms;
+  &:hover {
+    background-color: darken($green, 0.05);
+  }
+  &:focus {
+    outline: none;
+    background-color: darken($green, 0.1);
+  }
+  &:active {
+    background-color: $blue;
+  }
+  &--red {
+    background-color: $orange;
+    color: $white;
+    &:hover {
+      background-color: darken($orange, 0.05);
+    }
+    &:focus {
+      outline: none;
+      background-color: darken($orange, 0.1);
+    }
+    &:active {
+      background-color: darken($orange, 0.15);
+    }
+  }
+  &--outline-light {
+    background-color: transparent;
+    border: 1px solid $white;
+    &:hover {
+      background-color: rgba($white, 0.05);
+    }
+    &:focus {
+      outline: none;
+      background-color: rgba($white, 0.1);
+    }
+    &:active {
+      background-color: rgba($white, 0.15);
+    }
+  }
+  &--light {
+    background-color: $white;
+    color: $blue;
+    &:link,
+    &:visited {
+      background-color: $white;
+      color: $blue;
+    }
+    &:hover {
+      background-color: rgba($white, 0.95);
+      color: $green;
+    }
+    &:focus {
+      outline: none;
+      background-color: $white;
+      box-shadow: 0 0 15px 0 rgba($white, 0.2);
+      color: $green;
+    }
+    &:active {
+      background-color: rgba($white, 0.85);
+    }
+  }
+}

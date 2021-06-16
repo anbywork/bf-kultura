@@ -1,0 +1,103 @@
+.news.page-wrapper {
+  width: 968px;
+  @media screen and (max-width:1024px) {
+    width: 700px;
+  }
+  @media screen and (max-width: 766px){
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.news__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.news-item {
+  display: flex;
+}
+
+.news-item a {
+  display: flex;
+  flex-direction: row-reverse;
+  color: $black;
+  @media screen and (max-width:767px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.news-item + .news-item {
+  margin-top: 40px;
+  @media screen and (max-width: 766px){
+    margin-top: 80px;
+  }
+}
+
+
+.news-item__img {
+  margin-right: 40px;
+  width: 262px;
+  min-width: 262px;
+  @media screen and (max-width:767px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.news-item__img img,
+.news-item__img picture {
+  width: 262px;
+  border-radius: 5px;
+}
+
+.news-item__date {
+  @include reset;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: rgba($black, 0.5);
+}
+
+.news-item__title {
+  @include reset;
+  margin-bottom: 20px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.news-item__description {
+  @include reset;
+}
+
+.news__message {
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  background-color: $light-grey;
+  color: $middle-grey;
+  text-align: center;
+}
+
+.news__message--error {
+  color: $orange;
+  border-color: $orange;
+  background-color: rgba($orange, 0.05);
+}
+
+.news__message--hide {
+  display: none;
+}
+
+.news__message-btn {
+  box-shadow: none;
+  background-color: transparent;
+  color: $orange;
+  border: none;
+  text-decoration: underline;
+  &:focus {
+    outline-color: rgba($orange, 0.7);
+  }
+}

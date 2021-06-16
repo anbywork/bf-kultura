@@ -1,0 +1,43 @@
+.staff {
+  @include reset-list;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.staff__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.staff__item + .staff__item {
+  margin-top: 20px;
+}
+
+.staff__item picture {
+  margin-right: 15px;
+}
+
+.staff__item img,
+.staff__item picture {
+  width: 100px;
+}
+
+.staff__position {
+  @include reset;
+  margin-top: 5px;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba($black, 0.5);
+}
+
+.staff__name {
+  @include reset;
+
+}

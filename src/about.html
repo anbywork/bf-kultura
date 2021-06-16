@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3276cf">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/styles/main.min.css">
+  <title>Благотворительный фонд Восточный</title>
+
+</head>
+<body>
+@@include('html-blocks/_header-about.html')
+<main class="inner-page about page-wrapper longread">
+  <section class="longread__nav">
+    <h1 class="longread__title">О фонде</h1>
+    <ul class="longread__nav-list">
+      <li class="longread__nav-item longread__nav-item--active"><a href="#contacts">Контакты</a></li>
+      <li class="longread__nav-item"><a href="#docs">Учредительные документы</a></li>
+      <li class="longread__nav-item"><a href="#reports">Отчеты</a></li>
+      <li class="longread__nav-item"><a href="#partners">Партнеры</a></li>
+      <li class="longread__nav-item"><a href="#structure">Структура фонда</a></li>
+      <li class="longread__nav-item"><a href="#acknowledgments">Благодарности</a></li>
+      <li class="longread__nav-item"><a href="#about">О фонде</a></li>
+    </ul>
+  </section>
+  <div class="longread__blocks">
+    <section class="about__contacts contacts longread-block" id="contacts">
+      <h2 class="longread-block__title">Контакты</h2>
+      <ul class="contacts__address-list">
+        <li>
+          <section class="contacts__address">
+            <header>
+              <h3>Фактический адрес</h3>
+              <button class="contacts__map-btn link">На карте</button>
+            </header>
+            <p class="contacts__address-body">680000, Хабаровский край, г&nbsp;Хабаровск, ул&nbsp;Дзержинского, 21А корп.&nbsp;2</p>
+          </section>
+          <section class="popup popup-map popup--hide">
+            <div class="popup__bg"></div>
+            <div class="popup__wrapper">
+              <button class="popup__close-btn">Закрыть</button>
+              <h2 class="visually-hidden">Благотворительный фонд на карте Хабаровска</h2>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4257.406019709308!2d135.0675694435066!3d48.47302627450416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5efae9899c3a6eb3%3A0x4eff5e77934ef6d7!2z0YPQuy4g0JTQt9C10YDQttC40L3RgdC60L7Qs9C-LCAyMdCQLCDQpdCw0LHQsNGA0L7QstGB0LosINCl0LDQsdCw0YDQvtCy0YHQutC40Lkg0LrRgNCw0LksIDY4MDAwMA!5e0!3m2!1sru!2sru!4v1601542099071!5m2!1sru!2sru" width="1110" height="442" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </section>
+
+        </li>
+        <li>
+          <section class="contacts__address">
+            <header>
+              <h3>Почтовый адрес</h3>
+            </header>
+            <p class="contacts__address-body">680007, г. Хабаровск, ул. Шевчука&nbsp;23. Благотворительный фонд &laquo;Восточный&raquo;</p>
+          </section>
+        </li>
+      </ul>
+      <div class="contacts__person-and-feedback">
+        <ul class="contacts__person-list">
+          <li class="contacts-person">
+            <h3 class="contacts-person__name">Турышева Елена Владимировна</h3>
+            <p class="contacts-person__position">председатель правления фонда</p>
+            <p class="contacts-person__phone">+7 (4212) 41-38-61, внутр. 31110</p>
+            <p class="contacts-person__email"><a href="mailto:evturysheva@vostbank.ru">evturysheva@vostbank.ru</a></p>
+          </li>
+          <li>
+            <h3 class="contacts-person__name">Галиева Татьяна Гафиатулловна</h3>
+            <p class="contacts-person__position">исполнительный директор</p>
+            <p class="contacts-person__phone">+7 (4212) 41-38-61, внутр. 31184</p>
+            <p class="contacts-person__email"><a href="mailto:tggalieva@vostbank.ru">tggalieva@vostbank.ru</a></p>
+          </li>
+        </ul>
+        <div class="contacts__feedback contacts-feedback">
+          <section class="contacts-feedback__message">
+            <h3>Неудобно писать на email?</h3>
+            <p>Воспользуйтесь формой<br>
+              <button class="contacts__feedback-btn">обратной связи</button></p>
+          </section>
+          <section class="popup popup-feedback popup__form popup--hide">
+            <div class="popup__bg"></div>
+            <div class="popup__wrapper">
+              <button class="popup__close-btn">Закрыть</button>
+              <h2 class="visually-hidden">Форма обратной связи</h2>
+              <form class="popup-feedback__form form2" action="" method="post">
+                <label for="email">
+                  <span class="form2__label">Email*</span>
+                  <input class="form2__input" id="email" name="email" type="email" placeholder="Куда прислать ответ по вашему вопросу?" required>
+                </label>
+                <label for="name">
+                  <span class="form2__label">Имя*</span>
+                  <input class="form2__input" id="name" name="name" type="text" maxlength="50" minlength="2" placeholder="Как к вам обращаться" required>
+                </label>
+                <label>
+                  <span class="form2__label">Сообщение*</span>
+                  <textarea class="form2__textarea" name="message" placeholder="О чем вы хотите спросить?" rows="5" required></textarea>
+                </label>
+                <button class="btn btn--bright" type="submit">Отправить сообщение</button>
+                <p class="form2__caption">Нажимая на кнопку «Отправить сообщение», вы&nbsp;соглашаетесь <a class="link" href="privacy-policy.html" target="_blank">c&nbsp;политикой
+                  обработки персональных данных</a>.</p>
+              </form>
+              <section class="message__wrapper message__wrapper--success message__wrapper--hide">
+                <h2>Ваше сообщение успешно отправлено</h2>
+                <p>Мы отправим ответ на указанный email в ближайшее время</p>
+              </section>
+              <section class="message__wrapper message__wrapper--error message__wrapper--hide">
+                  <h2>Что-то пошло&nbsp;не&nbsp;так</h2>
+                  <p><button class="message__hide-btn link" type="button">Попробуйте еще раз</button> или <a target="_blank" href="/about.html#contacts">свяжитесь с&nbsp;нами другим способом</a></p>
+              </section>
+            </div>
+
+
+          </section>
+        </div>
+      </div>
+    </section>
+    <section class="about__docs about-docs longread-block" id="docs">
+      <h2 class="longread-block__title">Учредительные документы</h2>
+      <ul class="about-docs__list">
+        <li class="about-docs__list-item">
+          <a class="doc doc--pdf" href="docs/Свидетельство%20о%20внесении%20записи%20в%20ЕГРЮЛ.pdf" target="_blank">Свидетельство о&nbsp;внесении записи в&nbsp;ЕГРЮЛ</a>
+        </li>
+        <li class="about-docs__list-item">
+          <a class="doc doc--pdf" href="docs/Свидетельство%20о%20государственной%20регистрации.pdf" target="_blank">Свидетельство о&nbsp;государственной регистрации</a>
+        </li>
+        <li class="about-docs__list-item">
+          <a class="doc doc--pdf" href="docs/Свидетельство%20о%20постановке%20на%20учет.pdf" target="_blank">Свидетельство о&nbsp;постановке на&nbsp;учет</a>
+        </li>
+        <li class="about-docs__list-item">
+          <a class="doc doc--pdf" href="docs/Устав.pdf" target="_blank">Устав БФ «Восточный благотворительный фонд»</a>
+        </li>
+      </ul>
+    </section>
+    <section class="about__reports about-reports longread-block" id="reports">
+      <h2 class="longread-block__title">Отчеты</h2>
+      <ul class="about-reports__years-list">
+        <li class="about-reports__years-list-item">
+          <button class="about-reports__year">2020 год</button>
+          <ul class="about-reports__report-list">
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="" target="_blank">Сентябрь</a>
+            </li>
+          </ul>
+        </li>
+        <li class="about-reports__years-list-item">
+          <button class="about-reports__year">Годовые отчеты за 2010-2019 годы</button>
+          <ul class="about-reports__report-list">
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="docs/reports/отчет%20за%202019%20год.pdf" target="_blank">Отчет за 2019 год</a>
+            </li>
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="docs/reports/отчет%20за%202018%20год.pdf" target="_blank">Отчет за 2018 год</a>
+            </li>
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="docs/reports/отчет%20за%202017%20год.pdf" target="_blank">Отчет за 2017 год</a>
+            </li>
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="docs/reports/отчет%20за%202016%20год.pdf" target="_blank">Отчет за 2016 год</a>
+            </li>
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="docs/reports/отчет%20за%202015%20год.pdf" target="_blank">Отчет за 2015 год</a>
+            </li>
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="docs/reports/отчет%20за%202014%20год.pdf" target="_blank">Отчет за 2014 год</a>
+            </li>
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="docs/reports/отчет%20за%202013%20год.pdf" target="_blank">Отчет за 2013 год</a>
+            </li>
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="docs/reports/отчет%20за%202012%20год.pdf" target="_blank">Отчет за 2012 год</a>
+            </li>
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="docs/reports/отчет%20за%202011%20год.pdf" target="_blank">Отчет за 2011 год</a>
+            </li>
+            <li class="about-reports__report">
+              <a class="doc doc--pdf" href="docs/reports/отчет%20за%202010%20год.pdf" target="_blank">Отчет за 2010 год</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="about__partners about-partners longread-block" id="partners">
+      <h2 class="longread-block__title">Партнеры</h2>
+      <ul class="about-partners__list">
+        <li class="about-partners__list-item about-partners__list-item--vostbank">
+          <img src="/img/content/vostbank.svg" width="200" height="25" alt="Восточный банк">
+        </li>
+      </ul>
+    </section>
+    <section class="about__structure about-structure longread-block" id="structure">
+      <h2 class="longread-block__title">Структура фонда</h2>
+      <div class="about-structure__list">
+        <div class="about-structure__list-item">
+          <header>
+            <h3>Учредители Фонда</h3>
+          </header>
+          <ul class="about-structure__staff-list staff">
+            <li class="staff__item">
+              <img class="staff__photo" src="/img/content/staff/badahov.jpg" srcset="/img/content/staff/badahov@2x.jpg 2x" alt="">
+              <p>Бадахов Ренат Абулкеримович</p>
+            </li>
+            <li class="staff__item">
+              <img class="staff__photo" src="/img/content/staff/turysheva.jpg" srcset="/img/content/staff/turysheva@2x.jpg 2x" alt="">
+              <p>Турышева Елена Владимировна</p>
+            </li>
+          </ul>
+        </div>
+        <div class="about-structure__list-item">
+          <header>
+            <h3>Правление Фонда</h3>
+          </header>
+          <ul class="about-structure__staff-list staff">
+            <li class="staff__item">
+              <img class="staff__photo" src="/img/content/staff/turysheva.jpg" srcset="/img/content/staff/turysheva@2x.jpg 2x" alt="">
+              <div>
+                <p class="staff__name">Турышева Елена Владимировна</p>
+                <p class="staff__position">Председатель Правления Фонда</p>
+              </div>
+            </li>
+            <li class="staff__item">
+              <img class="staff__photo" src="/img/content/staff/rukavishnikov.jpg" srcset="img/content/staff/rukavishnikov@2x.jpg 2x" alt="">
+              <p>Рукавишников Александр Викторович</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="about-structure__list">
+        <div class="about-structure__list-item">
+          <header>
+            <h3>Попечительский совет</h3>
+          </header>
+          <ul class="about-structure__staff-list staff">
+            <li class="staff__item">
+              <div>
+                <p class="staff__name">Мисуркин Александр Александрович</p>
+                <p class="staff__position">Председатель попечительского совета</p>
+              </div>
+            </li>
+            <li class="staff__item">
+              <p>Труханович Светлана Алексеевна</p>
+            </li>
+            <li class="staff__item">
+              <p>Аветисян Артём Давидович</p>
+            </li>
+          </ul>
+        </div>
+        <div class="about-structure__list-item">
+          <header>
+            <h3>Сотрудники фонда</h3>
+          </header>
+          <ul class="about-structure__staff-list staff">
+            <li class="staff__item">
+              <img class="staff__photo" src="/img/content/staff/galieva.jpg" srcset="/img/content/staff/galieva@2x.jpg 2x" alt="">
+              <div>
+                <p class="staff__name">Галиева Татьяна Гафиатулловна</p>
+                <p class="staff__position">Исполнительный директор</p>
+              </div>
+            </li>
+            <li class="staff__item">
+              <img class="staff__photo" src="/img/content/staff/pulkova.jpg" srcset="/img/content/staff/pulkova@2x.jpg 2x" alt="">
+              <div>
+                <p class="staff__name">Пулькова Алина Сергеевна</p>
+                <p class="staff__position">Педагог-методист</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="about__acknowledgments about-acknowledgments longread-block" id="acknowledgments">
+      <h2 class="longread-block__title">Благодарности</h2>
+      <ul class="about-acknowledgments__list">
+        <li class="about-acknowledgments__list-item">
+          <a class="doc doc--pdf" href="docs/acknowledgments/Точка%20отсчета.%20Информационный%20стандарт%20годового%20отчета%202012%20года.pdf" target="_blank">Точка отсчета. Информационный стандарт годового отчета 2012 года</a>
+        </li>
+        <li class="about-acknowledgments__list-item">
+          <a class="doc doc--pdf" href="docs/acknowledgments/Точка%20отсчета.%20Сертификат%20соответствия%20информационному%20стандарту%202012%20год.pdf" target="_blank">Точка отсчета. Сертификат соответствия информационному стандарту 2012 год</a>
+        </li>
+        <li class="about-acknowledgments__list-item">
+          <a class="doc doc--pdf" href="docs/acknowledgments/Лучшие%20социальные%20проекты%20России.%20Диплом.pdf" target="_blank">Лучшие социальные проекты России. Диплом</a>
+        </li>
+        <li class="about-acknowledgments__list-item">
+          <a class="doc doc--pdf" href="docs/acknowledgments/Центр%20РНО.%20Диплом%20победителя%20конкурса%20Лучшие%20практика%20фандрайзинга.pdf" target="_blank">Центр РНО. Диплом победителя конкурса Лучшие практика фандрайзинга</a>
+        </li>
+        <li class="about-acknowledgments__list-item">
+          <a class="doc doc--pdf" href="docs/acknowledgments/Признательность%20от%20мед%20центра%20«Сакура».pdf" target="_blank">Признательность от мед центра «Сакура»</a>
+        </li>
+        <li class="about-acknowledgments__list-item">
+          <a class="doc doc--pdf" href="docs/acknowledgments/Точка%20отсчета.%20Базовый%20стандарт%20годового%20отчета%202016%20года.pdf" target="_blank">Точка отсчета. Базовый стандарт годового отчета 2016 года</a>
+        </li>
+      </ul>
+
+    </section>
+    <section class="about__about about-about longread-block" id="about">
+      <h2 class="longread-block__title">О фонде</h2>
+      <p>Благотворительный фонд &laquo;Восточный&raquo; был создан в&nbsp;2010&nbsp;году. Инициатором создания стал &laquo;Восточный экспресс банк&raquo;. Клиенты, сотрудники и&nbsp;партнеры банка вносят денежные пожертвования и&nbsp;безвозмездно оказывают фонду услуги. Благодаря им&nbsp;стала возможна деятельность Фонда: помощь детям, которые оказались в&nbsp;трудной жизненной ситуации.</p>
+      <p>На&nbsp;протяжении 10&nbsp;лет приоритетным направлением была и&nbsp;остается адресная и&nbsp;целевая помощь.
+        Помощь конкретным детям!</p>
+      <p>За&nbsp;10&nbsp;лет работы более 2000 детей на&nbsp;территории России получили помощь на&nbsp;общую сумму более
+        78&nbsp;миллионов рублей.</p>
+      <ul>
+        <li><b>881 человек</b> получили помощь на&nbsp;лечение и&nbsp;реабилитацию здоровья,</li>
+        <li><b>410 детей-сирот и&nbsp;принявших их&nbsp;семей</b>, получили финансовую поддержку,</li>
+        <li><b>814 детей с&nbsp;ограниченными возможностями</b> получили в&nbsp;подарок ноутбуки для обучения, интеллектуального развития и&nbsp;связи с&nbsp;внешним миром.</li>
+      </ul>
+      <p><b>В&nbsp;2020 году стартовала новая программа &laquo;Домашний репетитор&raquo;</b>&nbsp;&mdash; благотворительная программа помощи в&nbsp;обучении детям в&nbsp;детских домах. Благодаря программе организовываются и&nbsp;проводятся индивидуальные занятия с&nbsp;репетитором для детей, проживающих в&nbsp;детских домах.</p>
+      <p>Благотворительная программа &laquo;Домашний репетитор&raquo;</p>
+      <ul>
+        <li>устраняет пробелы в&nbsp;освоении школьной программы,</li>
+        <li>помогает в&nbsp;закреплении знаний и&nbsp;подготовке к&nbsp;сдаче государственных экзаменов,</li>
+        <li>улучшает положение детей, проживающих в&nbsp;учреждениях социального обслуживания (интернаты, детские дома, детские приюты) и&nbsp;охватывает вопросы здоровья, экономического благополучия, социальной адаптации, воспитания, защиты интересов и&nbsp;прав воспитанников.</li>
+      </ul>
+      <h3>Цель:</h3>
+      <p>Создание инновационной социальной практики, меняющей положение детей-сирот в&nbsp;системе образования, посредством организации индивидуальных занятий репетиторов с&nbsp;детьми-сиротами на&nbsp;базе детских домов и&nbsp;в&nbsp;режиме онлайн-консультаций.</p>
+      <h3>Задачи:</h3>
+      <ul>
+        <li>Внесение вклада в&nbsp;доступность образования для детей-сирот.</li>
+        <li>Повышение уровня образования для детей-сирот из&nbsp;удаленных регионов страны.</li>
+        <li>Расширение числа качественных абитуриентов, поступающих в&nbsp;средне-специальные и&nbsp;высшие учебные заведения.</li>
+        <li>Минимизация количества детей, выбирающих делинквентные модели поведения в&nbsp;обществе.</li>
+        <li>Социализация и&nbsp;адаптация в&nbsp;обществе детей из&nbsp;детских домов</li>  
+      </ul>
+      <p>Мы&nbsp;хотим помочь детям из&nbsp;детских домов адаптироваться во&nbsp;внешнем мире, получить образование и&nbsp;добиться успехов. Но&nbsp;убеждены, что благотворительность это не&nbsp;столько деньги, сколько соучастие, поддержка и&nbsp;умение вселить веру в&nbsp;собственные силы, помочь не&nbsp;потерять достоинство ребятам, находящимся в&nbsp;трудной жизненной ситуации. Все, что мы&nbsp;делаем, мы&nbsp;делаем от&nbsp;чистого сердца. Мы&nbsp;призываем всех присоединиться к&nbsp;нашим добрым делам. Поделитесь частичкой тепла и&nbsp;заботы с&nbsp;теми, кому это нужно! Примите участие в&nbsp;работе фонда. С&nbsp;вашей поддержкой мы&nbsp;сможем больше!</p>
+      <p>Благотворительный фонд &laquo;Восточный&raquo; гарантирует полную отчетность о&nbsp;расходовании денежных пожертвований. Контроль за&nbsp;расходованием средств осуществляется попечительским советом фонда. Так&nbsp;же фонд проходит ежегодные аудиторские проверки.</p>
+    </section>
+  </div>
+</main>
+@@include('html-blocks/_footer.html')
+<script src="js/script.min.js"></script>
+</body>
+</html>

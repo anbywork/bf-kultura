@@ -1,0 +1,73 @@
+.message {
+  background-color: $light-grey;
+  display: flex;
+  padding: 80px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  &--hide {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 20px;
+  }
+}
+
+.message__wrapper {
+  display: block;
+  padding: 50px;
+  text-align: center;
+
+  border: 1px solid #3276CF;
+  box-sizing: border-box;
+  border-radius: 15px;
+  &--hide {
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 30px 10px;
+  }
+}
+
+
+.message h2,
+.message__wrapper h2{
+  @include reset;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 32px;
+  color: $green;
+  @media screen and (max-width: 767px) {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+
+.message--error .message__wrapper,
+.message__wrapper--error {
+  border-color: $orange;
+}
+
+.message--error h2,
+.message__wrapper--error h2 {
+  color: $orange;
+}
+
+.message p {
+  @include reset;
+  display: inline;
+}
+
+.message__hide-btn {
+  @include reset;
+  display: inline;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  font: inherit;
+  &:focus {
+    outline: none;
+  }
+}
