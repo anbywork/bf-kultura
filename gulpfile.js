@@ -15,6 +15,7 @@ const PATH = {
     js: SOURCE_FOLDER + '/js/**/*',
     img: SOURCE_FOLDER + '/img/**/*',
     fonts: SOURCE_FOLDER + '/fonts/*.ttf',
+    favicon: SOURCE_FOLDER + '/favicon/*',
 
   },
   clean: './' + BUILD_FOLDER + '/',
@@ -25,7 +26,7 @@ const PATH = {
     img: BUILD_FOLDER + '/img/',
     svgIcons: BUILD_FOLDER + '/img/icons',
     fonts: BUILD_FOLDER + '/fonts/',
-    favicon: BUILD_FOLDER + '/',
+    favicon: BUILD_FOLDER + '/favicon',
   },
   watch: {
     html: SOURCE_FOLDER + '/**/*.html',
@@ -181,6 +182,11 @@ task('sassToCssProd', ()=> {
     .pipe(dest(PATH.build.css))
 });
 
+task('favicon', ()=> {
+  return src(PATH.src.favicon)
+    .pipe(dest(PATH.build.favicon))
+});
+
 task('browserSync', ()=> {
   packages.browserSync.init({
     server: {
@@ -200,7 +206,7 @@ task('watch', ()=> {
   watch(PATH.watch.img, series('images-min'));
 });
 
-task('default', series('clean', parallel('images-min', 'html', 'webpack', 'sassToCss'), parallel('watch', 'browserSync')));
-task('build', series('clean', parallel('images-min', 'html', 'webpack', 'sassToCssProd')));
+task('default', series('clean', parallel('images-min', 'html', 'webpack', 'sassToCss', 'favicon'), parallel('watch', 'browserSync')));
+task('build', series('clean', parallel('images-min', 'html', 'webpack', 'sassToCssProd', 'favicon')));
 
 

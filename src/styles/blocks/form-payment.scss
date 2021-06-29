@@ -1,9 +1,55 @@
 .form-payment {
+  @include shadow;
+  
   display: flex;
-  flex-direction: row;
-  @media screen and (max-width: 1280px){
-    flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 60px;
+  @media screen and (min-width: $ipad) {
+    margin-bottom: 100px;
   }
+  @media screen and (min-width: $ipadpro) {
+    width: 376px;
+    margin-bottom: 0;
+  }
+}
+
+.form-payment__top {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0;
+  @media screen and (min-width: $iphone11) {
+    padding: 20px 20px 0;
+  }
+}
+
+.form-payment__row {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $ipad) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    & .form__fieldset {
+      width: 50%;
+      flex-grow: 0;
+    }
+  }
+  @media screen and (min-width: $ipadpro) {
+    flex-direction: column;
+    align-items: center;
+    & .form__fieldset {
+      width: 100%;
+    }
+  }
+  
+  
+}
+
+.form-payment__bottom {
+  margin: 3px;
+  padding: 20px 7px 20px;
+  border-radius: 0 0 8px 8px;
+  background-color: rgba($violet, 0.06);
 }
 
 .form-payment__text-field {
@@ -26,12 +72,20 @@
 .form-payment__input,
 .form-payment__select {
   padding-left: 15px;
-  width: 370px;
+  width: 100%;
   box-sizing: border-box;
   height: 50px;
   border-radius: 0;
-  @media screen and (max-width: 1280px){
-    width: 100%;
+}
+
+.form__input--rouble {
+  position: relative;
+  
+  &::after {
+    position: absolute;
+    content: '₽';
+    top: 15px;
+    right: 16px;
   }
 }
 
@@ -53,179 +107,57 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 25px;
-
-
-  @media screen and (max-width: 766px) {
-    width: 100%;
-    justify-content: space-between;
-  }
+  justify-content: flex-end;
 
   & li {
     @include reset;
-    margin-right: 10px;
-    @media screen and (max-width: 766px) {
-      flex-grow: 1;
-      flex-shrink: 1;
-
-    }
-    &:last-child {
-      @media screen and (max-width: 766px) {
-        margin-right: 0;
-      }
-    }
+  }
+  & li + li {
+    margin-left: 4px;
   }
 }
 
 
 
-.form__label-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 14px 20px;
-  min-height: 50px;
-  min-width: 100px;
-  cursor: pointer;
-  background-color: $white;
-  border-radius: 10px;
-  text-align: center;
-  &:hover {
-    background-color: $green;
-    color: $white;
-    & .rouble::after {
-      background-position-y: -34px;
-    }
-  }
-  @media screen and (max-width: 1024px){
-    min-width: 60px;
-    padding: 14px 15px;
-  }
-  @media screen and (max-width: 766px){
-    width: 100%;
-    min-width: auto;
-    padding: 5px;
-    margin-right: 5px;
-  }
-
-}
-
-
-.form-payment__amount-input {
-  @include reset;
-  box-sizing: border-box;
-  border: none;
-  box-shadow: none;
-  height: 50px;
-  width: 190px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  text-align: center;
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  @media screen and (max-width: 1024px) {
-    padding: 10px 10px;
-    width: 140px;
-  }
-  @media screen and (max-width: 766px) {
-    width: 100%;
-    margin-left: 10px;
-  }
-  @media screen and (max-width: 500px) {
-    margin-left: 0;
-  }
+.form__input--rouble .form-payment__amount-input {
+  margin-bottom: 12px;
+  padding: 10px 38px 10px 20px;
+  text-align: right;
+  width: 100%;
 }
 
 .form-payment__btn-caption {
-  @media screen and (max-width: 1280px){
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-  }
-  @media screen and (max-width: 766px){
-    flex-direction: column-reverse;
-    margin-top: 30px;
-  }
-}
-
-.form-payment__btn-row {
-  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 630px;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 25px;
-  @media screen and (max-width: 1280px){
-    margin-bottom: 0;
-    width: 530px;
-  }
-  @media screen and (max-width: 1024px){
-    width: 380px;
-  }
-  @media screen and (max-width: 766px){
-    width: 100%;
-    flex-direction: column;
-    order: 1;
-    margin-bottom: 30px;
-  }
 }
 
 .form-payment__btn-submit {
-  min-width: 210px;
   cursor: pointer;
-  @media screen and (max-width: 1280px){
-    order: 1;
-  }
-  @media screen and (max-width: 1024px){
-    min-width: 150px;
-  }
-  @media screen and (max-width: 766px){
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  width: 100%;
+  margin-bottom: 20px;
+  @media screen and (min-width: $ipad) {
+    width: 50%;
   }
 }
 
 
 .form-payment__methods {
-  height: 21px;
-  @media screen and (max-width: 1280px){
-    position: absolute;
-    right: 0;
-    top: -60px;
-
-  }
-  @media screen and (max-width: 766px){
-    position: static;
-    order: 3;
-  }
 }
 
 .form-payment__caption {
-  width: 628px;
   @include reset;
-  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  @media screen and (max-width: 1024px){
-    width: 400px;
-    margin-right: 20px;
-  }
-  @media screen and (max-width: 766px){
-    margin-right: 0;
-    width: 100%;
-  }
+  text-align: center;
 }
 
 .form-payment__checkbox {
-  @media screen and (max-width: 766px){
-    box-sizing: border-box;
-    width: 100%;
+  margin-bottom: 20px;
+  @media screen and (min-width: $ipad) {
+    width: 50%;
+    justify-content: center;
   }
 }

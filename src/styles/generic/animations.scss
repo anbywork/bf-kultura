@@ -1,0 +1,41 @@
+@keyframes nav-in {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  1% {
+    opacity: 0;
+    display: flex;
+    transform: translateY(-20px);
+  }
+  
+  100% {
+    opacity: 1;
+    display: flex;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nav-out {
+  0% {
+    opacity: 1;
+    display: flex;
+    transform: translateY(0);
+  }
+  
+  99% {
+    opacity: 0;
+    display: flex;
+    transform: translateY(-20px);
+  }
+  
+  100% {
+    opacity: 0;
+    display: none;
+    transform: translateY(-20px);
+  }
+  
+  
+}

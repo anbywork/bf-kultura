@@ -8,15 +8,37 @@
   list-style: none;
 }
 
+@mixin shadow {
+  background: $white;
+  box-shadow:
+    0px 25px 20px -20px rgba($violet, 0.15),
+    0px 0px 50px rgba($violet, 0.11);
+  border-radius: 12px;
+  transition: box-shadow 300ms ease-in-out;
+  &:hover {
+    cursor: pointer;
+    box-shadow:
+      0px 30px 20px -20px rgba($violet, 0.3),
+      0px 0px 50px rgba($violet, 0.2);
+  }
+}
+
+* {
+  box-sizing: inherit;
+}
+
 body {
   @include reset;
-  font-family: Plumb, sans-serif;
+  font-family: $font-text;
   font-size: 16px;
   line-height: 22px;
   color: $black;
+  box-sizing: border-box;
   background: radial-gradient(51.25% 101.35% at 7.19% 44.43%, #EBF8FF 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(100% 197.75% at 100% 0%, rgba(241, 234, 255, 0.958333) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
   background-blend-mode: multiply, normal, normal;
 }
+
+
 
 
 main {
@@ -35,32 +57,35 @@ picture {
   display: block;
 }
 
-a,
-.link {
+a {
   text-decoration: none;
   transition: background-color ease-in-out 300ms,
   color ease-in-out 300ms;
-  &:link,
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  color: $violet;
   &:visited {
-    color: $green;
+    color: $violet;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     color: $blue;
+    
   }
   &:focus {
-    outline-color: $green;
+    outline-color: $violet;
     outline-width: 1px;
     color: $blue;
   }
   &:active {
-    color: $green;
+    color: $violet;
   }
 
 }
 
 .link {
-  color: $green;
+  color: $violet;
 }
 
 
@@ -109,4 +134,22 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
     background-position: -168px 0;
   }
+}
+
+
+// убирает тени для input в safari
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+// убирает стрелочки для input number
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

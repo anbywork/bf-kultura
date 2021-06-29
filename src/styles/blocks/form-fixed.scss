@@ -1,0 +1,18 @@
+.form-fixed {
+  @media screen and (min-width: $ipadpro) {
+    position: fixed;
+    right: 50px;
+    width: 376px;
+    //transition-property: top, bottom;
+    //transition-timing-function: ease-in-out;
+    //transition-duration: 300ms;
+    &.form-fixed--top {
+      top: 130px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    right: calc((100% - 1170px) / 2);
+  }
+}
+
+

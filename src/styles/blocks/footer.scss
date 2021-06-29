@@ -1,184 +1,115 @@
 .footer {
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  box-sizing: border-box;
-  background-color: $blue;
-  color: $white;
-
+  flex-direction: column;
+  border-top: 1px solid rgba($black, 0.1);
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba($black, 0.7);
 }
 
-.footer a:not(.btn) {
-  text-decoration: none;
-  &:link,
-  &:visited {
-    color: rgba($white, 0.7);
-  }
-  &:hover,
-  &:focus {
-    outline-color: $white;
-    outline-width: 1px;
-    color: $white;
-  }
-  &:active {
-    color: $white;
-  }
-
-}
-
-.footer .page-wrapper {
+.footer__top {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-
-  @media screen and (max-width: 767px) {
-    flex-direction: column-reverse;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 15px;
+  @media screen and (min-width: $iphone11) {
+    padding: 40px 30px;
   }
+  @media screen and (min-width: $ipad) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 50px;
+  }
+  
 }
 
-.footer__logo-docs {
-  width: 260px;
-  margin-right: 40px;
-  box-sizing: border-box;
-  @media screen and (max-width: 1023px) {
-    width: 310px;
-    flex-shrink: 0;
-    margin-bottom: 80px;
-  }
-  @media screen and (max-width: 767px) {
-    //margin-bottom: 210px;
-    margin-bottom: 0;
-    margin-top: 40px;
-    margin-right: 0;
-  }
-  @media screen and (max-width: 350px) {
-    width: 100%;
+.footer__logo-and-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: $ipad) {
+    align-items: flex-start;
+    margin-right: 50px;
   }
 }
 
 .footer__logo {
+  margin-bottom: 24px;
+}
+
+.footer__contacts {
+  margin-bottom: 40px;
+  text-align: center;
+  @media screen and (min-width: $ipad) {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.footer__map {
+  @include reset-list;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  @media screen and (min-width: $ipad) {
+    justify-content: flex-end;
+    max-width: 500px;
+  }
+  @media screen and (min-width: $ipadpro) {
+    justify-content: flex-end;
+    max-width: 500px;
+  }
+}
+
+.footer__map-list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+  @media screen and (min-width: $ipad) {
+    width: auto;
+    margin-left: 30px;
+  }
+  @media screen and (min-width: $ipadpro) {
+    margin-left: 70px;
+  }
+}
+
+.footer__link {
   display: block;
-  margin-bottom: 30px;
-  @media screen and (max-width: 1023px) and (min-width: 768px){
-    margin-bottom: 200px;
+  padding: 5px 0;
+  color: rgba($black, 0.7);
+  
+  &:hover,
+  &:focus {
+    color: $violet;
+    outline: none;
   }
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
-
-.footer__logo img {
-  width: 160px;
-  height: 34px;
-}
-
-input::placeholder {
-  color: $black;
 }
 
 .footer__docs {
   @include reset-list;
-  @media screen and (max-width: 1023px) and (min-width: 768px){
-    position: absolute;
-    top: 250px;
-  }
-}
-
-.footer__details-and-contacts {
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  @media screen and (max-width: 1023px) {
-    flex-direction: column;
-    width: 370px;
-    flex-shrink: 0;
-  }
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
-}
-
-.footer-company-details {
-  @include reset-list;
-  width: 160px;
-  margin-right: 40px;
-  @media screen and (max-width: 1023px) {
-    margin-bottom: 25px;
-  }
-  @media screen and (max-width: 767px) {
-    margin-right: 0;
-  }
-}
-
-.footer-company-details,
-.footer__contacts {
-  margin-top: 3px;
-}
-
-.footer-docs__item,
-.footer-company-details__item {
-  margin-bottom: 5px;
-}
-
-.footer-docs__item a,
-.footer__contacts a {
-  display: block;
-  &:link,
-  &:visited {
-    color: rgba($white, 0.7);
-
-  }
-  &:hover {
-    color: $white;
-  }
-}
-
-.footer__contacts {
-  & p {
-    @include reset;
-    margin-bottom: 5px;
-  }
-}
-
-.footer__feedback-btn {
-  align-self: flex-start;
-  margin-top: 8px;
-  margin-bottom: 40px;
-  padding: 19px;
-  text-transform: uppercase;
-  background-clip: $white;
-  font-weight: 700;
-  width: 243px;
-  min-height: 60px;
-  @media screen and (max-width: 1279px){
-    width: 200px;
-  }
-  @media screen and (max-width: 1023px){
-    width: 100%;
-  }
-
-}
-
-.footer__btn-and-social {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-left: auto;
   align-items: center;
-  @media screen and (max-width: 1023px) and (min-width: 768px){
-    position: absolute;
-    top: 70px;
-    left: 0;
+  border-top: 1px solid rgba($black, 0.1);
+  padding: 40px 20px;
+  @media screen and (min-width: $iphone11) {
+    padding: 40px 30px;
   }
-  @media screen and (max-width: 767px){
-    margin-left: 0;
-    margin-bottom: 40px;
+  @media screen and (min-width: $ipad) {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px 50px;
   }
 }
 
-.footer__social {
-
+.footer-docs__item + .footer-docs__item {
+  @media screen and (min-width: $ipad) {
+    margin-top: 0;
+    margin-left: 30px;
+  }
 }
-
 

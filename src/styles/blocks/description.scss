@@ -1,0 +1,60 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 60px;
+  
+  @media screen and (min-width: $ipadpro){
+    padding: 70px 0 90px;
+  }
+  @media screen and (min-width: $desktop){
+    padding: 60px 0 80px;
+  }
+}
+
+.description__container {
+  @media screen and (min-width: $ipad){
+    max-width: 415px;
+  }
+  @media screen and (min-width: $ipadpro){
+    max-width: 365px;
+  }
+}
+
+.description__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $font-header;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 55px;
+  
+  @media screen and (min-width: $ipadpro){
+    margin-bottom: 30px;
+    font-size: 60px;
+    line-height: 65px;
+  }
+  @media screen and (min-width: $desktop){
+    margin-bottom: 40px;
+    font-size: 80px;
+    line-height: 75px;
+  }
+}
+
+.description__text {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  font-family: $font-text;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: rgba($black, 0.7);
+  @media screen and (min-width: $ipad){
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.description__btn {
+  width: 200px;
+}
