@@ -7,14 +7,15 @@
 
 .about-partners__list-item {
   @include reset;
+  @include shadow;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+  flex-shrink: 0;
   align-items: stretch;
-  width: calc(100% / 3 - 20px);
   height: 80px;
-  border-radius: 5px;
-  background-color: $light-grey;
+  background-color: $white;
 
   &:not(:nth-child(3n)) {
     margin-right: 30px;
@@ -40,7 +41,6 @@
 
   &--vostbank picture,
   &--vostbank img {
-    padding-bottom: 6px;
     height: 25px;
   }
   & img,
@@ -62,7 +62,6 @@
 }
 
 .about-partners__list-item:hover  {
-  background-color: darken($light-grey, 3%);
   cursor: pointer;
 }
 

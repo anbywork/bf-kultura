@@ -30,15 +30,14 @@
 }
 
 .contacts__address {
-  background-color: rgba($light-grey, 0.7);
-  border-radius: 5px;
+  @include shadow;
 
 }
 
 .contacts__address header{
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba($middle-grey, 0.5);
+  border-bottom: 1px solid rgba($violet, 0.1);
   padding: 20px;
 }
 
@@ -51,6 +50,7 @@
 }
 
 .contacts__map-btn {
+  cursor: pointer;
   @include reset;
   border: none;
   box-shadow: none;
@@ -58,8 +58,12 @@
   line-height: 15px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: $green;
+  color: $violet;
   background-color: transparent;
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
 }
 
 .contacts__address p.contacts__address,
@@ -133,12 +137,12 @@
 }
 
 .contacts-feedback__message {
-  background-color: $green;
+  background-color: $blue;
   box-sizing: border-box;
   padding: 40px;
   color: $white;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 12px;
   & h3 {
     @include reset;
     margin-bottom: 25px;

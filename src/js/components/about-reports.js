@@ -1,19 +1,16 @@
-{
-  'use strict';
-  const reportsBlock = document.querySelector('.about-reports');
-
-  if (reportsBlock) {
-    const btnsYear = reportsBlock.querySelectorAll('.about-reports__year');
-    for (let i = 0; i < btnsYear.length; i++) {
-      btnsYear[i].addEventListener('click', btnsYearClickHandler);
-    }
-
-    const docs = reportsBlock.querySelectorAll('.doc');
-    //если документ в фокусе добавить класс about-reports__year--opened ближайшему btnYear
-    for (let i = 0; i < docs.length; i++) {
-      docs[i].addEventListener('focus', docFocusHandler);
-    }
+export const setReports = (reportsBlock) => {
+  const btnsYear = reportsBlock.querySelectorAll('.about-reports__year');
+  for (let i = 0; i < btnsYear.length; i++) {
+    btnsYear[i].addEventListener('click', btnsYearClickHandler);
   }
+
+  const docs = reportsBlock.querySelectorAll('.doc');
+  //если документ в фокусе добавить класс about-reports__year--opened ближайшему btnYear
+  for (let i = 0; i < docs.length; i++) {
+    docs[i].addEventListener('focus', docFocusHandler);
+  }
+}
+
 
 
   function btnsYearClickHandler(evt) {
@@ -48,5 +45,3 @@
     hideCurrentReportList();
     showReportsList(closestBtnYear);
   }
-
-}

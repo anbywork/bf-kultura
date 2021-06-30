@@ -3,11 +3,15 @@ import {setBurger} from "./components/burger";
 import {FadeIn} from "./components/fade-in";
 import {setHeader} from "./components/header";
 import {FormFixed} from "./components/form-fixed";
+import {setAbout} from "./pages/about";
+import {setAnimationScroll} from "./utils/anchor-animation-scroll";
 
 //настройка хедера
 setBurger();
 setHeader();
 
+// настройка плавной прокрутки к якорям
+setAnimationScroll();
 
 // настройка анимации появления блоков
 const fadeInElements = document.querySelectorAll('.fade-out');
@@ -26,4 +30,10 @@ for (let input of Array.from(phoneInputs)) {
 }
 
 // настройка фиксации формы
-const formFixed = new FormFixed(document.querySelector('.form-fixed'));
+const formElement = document.querySelector('.form-fixed');
+if (formElement) {
+  const formFixed = new FormFixed(formElement);
+}
+
+// настройка страницы О нас
+setAbout();

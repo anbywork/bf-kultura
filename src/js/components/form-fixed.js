@@ -1,7 +1,6 @@
 export class FormFixed {
   constructor(element) {
     this.element = element;
-    this.height = element.offsetHeight;
     this.checkPosition = this.checkPosition.bind(this);
     this.setEdge = this.setEdge.bind(this);
     this.resetEdge = this.resetEdge.bind(this);

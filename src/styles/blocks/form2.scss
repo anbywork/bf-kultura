@@ -18,12 +18,19 @@
   box-sizing: border-box;
   height: 50px;
   width: 100%;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid rgba($middle-grey, 0.5);
   font: inherit;
+  padding: 16px 20px;
+  background: #EEF6FE;
+  border: 1px solid rgba(96, 105, 224, 0.2);
+  border-radius: 12px;
   &::placeholder {
     color: $middle-grey;
+  }
+  
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $blue;
   }
 }
 
@@ -31,9 +38,10 @@
   box-sizing: border-box;
   min-height: 200px;
   width: 100%;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid rgba($middle-grey, 0.5);
+  padding: 16px 20px;
+  background: #EEF6FE;
+  border: 1px solid rgba(96, 105, 224, 0.2);
+  border-radius: 12px;
   font: inherit;
   resize: none;
   @media screen and (max-width: 380px) {
@@ -42,6 +50,11 @@
   }
   &::placeholder {
     color: $middle-grey;
+  }
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $blue;
   }
 }
 

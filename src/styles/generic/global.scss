@@ -16,7 +16,6 @@
   border-radius: 12px;
   transition: box-shadow 300ms ease-in-out;
   &:hover {
-    cursor: pointer;
     box-shadow:
       0px 30px 20px -20px rgba($violet, 0.3),
       0px 0px 50px rgba($violet, 0.2);
@@ -32,7 +31,7 @@ body {
   font-family: $font-text;
   font-size: 16px;
   line-height: 22px;
-  color: $black;
+  color: rgba($black, 0.7);
   box-sizing: border-box;
   background: radial-gradient(51.25% 101.35% at 7.19% 44.43%, #EBF8FF 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(100% 197.75% at 100% 0%, rgba(241, 234, 255, 0.958333) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
   background-blend-mode: multiply, normal, normal;

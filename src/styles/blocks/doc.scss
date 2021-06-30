@@ -6,13 +6,17 @@
   margin-bottom: 5px;
   width: 100%;
   min-height: 45px;
-  border-radius: 5px;
-  color: $green;
-  background-color: rgba($light-grey, 1);
+  color: $black;
+  border-radius: 12px;
+  box-shadow: none;
+  background-color: $white;
+  
+  
+  
   &:focus,
   &:hover {
     outline: none;
-    background-color: rgba($green, 0.05);
+    color: $violet;
   }
   &::before {
     position: absolute;

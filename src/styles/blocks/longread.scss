@@ -1,29 +1,24 @@
 .longread {
+  position: relative;
   display: flex;
   box-sizing: border-box;
   min-height: calc(100vh - 250px);
+  margin-bottom: 100px;
   @media screen and (max-width: 1023px){
     flex-direction: column;
     align-items: center;
   }
 }
 
-.longread.inner-page {
-  padding-top: 100px;
-  @media screen and (max-width: 1280px) {
-    padding-top: 80px;
-  }
-  @media screen and (max-width: 1023px) {
-    padding-top: 50px;
-  }
-}
-
 .longread__nav {
   position: fixed;
   box-sizing: border-box;
-  width: 263px;
-  padding-top: 80px;
-  padding-right: 40px;
+  width: 100%;
+  
+  @media screen and (min-width: $iphone11) {
+    padding-top: 50px;
+  }
+  
   @media screen and (max-width: 1200px){
     width: 200px;
     flex-shrink: 0;
@@ -34,24 +29,30 @@
     width: auto;
     margin-bottom: 40px;
     padding-right: 0;
-
   }
   @media screen and (max-width: 767px){
     padding-top: 50px;
   }
 
-
   @media screen and (max-height: 530px){
     position: static;
+  }
+  
+  @media screen and (min-width: $desktop) {
+    width: 263px;
+    padding-top: 80px;
+    padding-right: 40px;
   }
 }
 
 .longread__title {
   @include reset;
   margin-bottom: 40px;
+  font-family: $font-header;
   font-weight: 300;
   font-size: 36px;
   line-height: 42px;
+  color: $black;
 }
 
 .longread__nav-list {
@@ -62,17 +63,18 @@
   position: relative;
   @include reset;
   margin-bottom: 20px;
+  padding-left: 15px;
   opacity: 0.7;
   transition: opacity ease-in-out 300ms;
   &::before {
     position: absolute;
     content: '';
-    left: -13px;
+    left: 0;
     top: 2px;
     width: 2px;
     height: 16px;
     border-radius: 5px;
-    background-color: $green;
+    background-color: $violet;
     opacity: 0;
     transition: opacity ease-in-out 300ms;
   }
@@ -89,21 +91,16 @@
 }
 
 .longread__blocks {
-  padding-left: 303px;
+  width: 100%;
   flex-grow: 0;
-  width: 870px;
-  @media screen and (max-width: 1200px){
-    padding-left: 240px;
+  
+  @media screen and (min-width: $ipadpro){
+    margin-left: 240px;
     width: 710px;
   }
-  @media screen and (max-width: 1023px){
-    flex-grow: 0;
-    width: 100%;
-    max-width: 710px;
-    padding-left: 0;
-  }
-  @media screen and (max-width: 767px){
-    max-width: none;
+  @media screen and (min-width: $desktop){
+    margin-left: 303px;
+    width: 870px;
   }
 }
 
@@ -120,9 +117,11 @@
   @include reset;
   margin-top: 9px;
   margin-bottom: 30px;
+  font-family: $font-header;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
+  color: $black;
   @media screen and (max-width: 1024px){
     margin-top: 0;
   }

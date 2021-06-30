@@ -1,7 +1,4 @@
-;{
-  'use strict';
-
-  const longread = document.querySelector('.longread');
+export const setLongread = (longread) => {
   if (longread) {
     const longreadNavItems = longread.querySelectorAll('.longread__nav-item');
     const longreadBlocks = longread.querySelectorAll('.longread-block');
@@ -15,11 +12,11 @@
 
     function selectActiveItem() {
 
-      for(let i = 0; i < longreadNavItems.length; i++) {
+      for (let i = 0; i < longreadNavItems.length; i++) {
         isToDownDirectionScroll = currentYPosition() > startPosition;
         let diff = elmYPosition(longreadBlocks[i]) - currentYPosition();
 
-        if ( diff >= 0 && diff <= 400) {
+        if (diff >= 0 && diff <= 200) {
           activeElem.classList.remove('longread__nav-item--active');
           longreadNavItems[i].classList.add('longread__nav-item--active');
           activeElem = longreadNavItems[i];
@@ -55,3 +52,4 @@
 
   }
 }
+

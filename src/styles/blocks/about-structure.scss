@@ -8,13 +8,9 @@
 }
 
 .about-structure__list-item {
+  @include shadow;
   width: 404px;
   box-sizing: border-box;
-  border-radius: 5px;
-  background-color: $light-grey;
-
-  @include reset;
-  width: 404px;
   @media screen and (max-width: 1200px){
     flex-shrink: 1;
   }
