@@ -14,11 +14,9 @@
   </section>
   
 
-  <section class="form-fixed fade-out">
-    <div class="page-wrapper">
-      <h2 class="visually-hidden">Заполните форму, чтобы помочь фонду</h2>
-      @@include('html-blocks/_form.html')
-    </div>
+  <section class="form-fixed fade-out container">
+    <h2 class="visually-hidden">Заполните форму, чтобы помочь фонду</h2>
+    @@include('html-blocks/_form.html')
   </section>
 
   <section class="main-page__projects container section">
@@ -27,15 +25,15 @@
         <h2 class="section__title">Активные проекты</h2>
         <a class="section__link link" href="/projects.html">Посмотреть все</a>
       </header>
-      <ul class="projects">
-        <li class="project fade-out">
-          <a class="project__link" href="/projects/online-teachers.html">
-            <div class="project__img-container">
-              <img class="project__img" src="/img/content/projects/project1.jpg" srcset="/img/content/projects/project1@2x.jpg 2x" alt="">
+      <ul class="main-page-projects">
+        <li class="main-page-project fade-out">
+          <a class="main-page-project__link" href="/projects/online-teachers.html">
+            <div class="main-page-project__img-container">
+              <img class="main-page-project__img" src="/img/content/projects/project1.jpg" srcset="/img/content/projects/project1@2x.jpg 2x" alt="">
             </div>
-            <div class="project__text">
-              <h3 class="project__title">Программа <br>домашний репетитор</h3>
-              <p class="project__description">Дистанционные онлайн-консультации по&nbsp;школьным предметам с&nbsp;репетиторами для&nbsp;детей-сирот.</p>
+            <div class="main-page-project__text">
+              <h3 class="main-page-project__title">Программа <br>домашний репетитор</h3>
+              <p class="main-page-project__description">Дистанционные онлайн-консультации по&nbsp;школьным предметам с&nbsp;репетиторами для&nbsp;детей-сирот.</p>
             </div>
           </a>
         </li>
@@ -88,6 +86,5 @@
   </section>
 </main>
 @@include('html-blocks/_footer.html')
-<script src="js/bundle.js"></script>
 </body>
 </html>

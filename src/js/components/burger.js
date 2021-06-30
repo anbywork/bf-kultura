@@ -1,11 +1,9 @@
 import {blockScroll, unblockScroll} from "./scroll-block";
-
+const main = document.querySelector('main');
 const header = document.querySelector('.header');
 const burger = header.querySelector('.header__burger');
 const navContainer = header.querySelector('.header__nav-container');
 export const setBurger = () => {
-
-
   burger.addEventListener('click', onClickBurger);
 }
 
@@ -25,6 +23,8 @@ function openNav() {
   navContainer.classList.remove('header__nav-container--closed');
   burger.classList.add('header__burger--opened');
   navContainer.classList.add('header__nav-container--opened');
+  main.addEventListener('click', mainClickHandler);
+  document.addEventListener('keydown', documentKeyDownHandler);
 }
 
 function closeNav() {
@@ -36,4 +36,16 @@ function closeNav() {
   setTimeout(()=>{
     navContainer.classList.remove('header__nav-container--closed');
   }, 300);
+  main.removeEventListener('click', mainClickHandler);
+  document.removeEventListener('keydown', documentKeyDownHandler);
+}
+
+function mainClickHandler(evt) {
+  closeNav();
+}
+
+function documentKeyDownHandler(evt) {
+  if (evt.key === 'Escape') {
+    closeNav();
+  }
 }

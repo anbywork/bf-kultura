@@ -28,15 +28,6 @@
             </header>
             <p class="contacts__address-body">680000, Хабаровский край, г&nbsp;Хабаровск, ул&nbsp;Дзержинского, 21А корп.&nbsp;2</p>
           </section>
-          <section class="popup popup-map popup--hide">
-            <div class="popup__bg"></div>
-            <div class="popup__wrapper">
-              <button class="popup__close-btn">Закрыть</button>
-              <h2 class="visually-hidden">Благотворительный фонд на карте Хабаровска</h2>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4257.406019709308!2d135.0675694435066!3d48.47302627450416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5efae9899c3a6eb3%3A0x4eff5e77934ef6d7!2z0YPQuy4g0JTQt9C10YDQttC40L3RgdC60L7Qs9C-LCAyMdCQLCDQpdCw0LHQsNGA0L7QstGB0LosINCl0LDQsdCw0YDQvtCy0YHQutC40Lkg0LrRgNCw0LksIDY4MDAwMA!5e0!3m2!1sru!2sru!4v1601542099071!5m2!1sru!2sru" width="1110" height="442" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-          </section>
-
         </li>
         <li>
           <section class="contacts__address">
@@ -68,40 +59,7 @@
             <p>Воспользуйтесь формой<br>
               <button class="contacts__feedback-btn">обратной связи</button></p>
           </section>
-          <section class="popup popup-feedback popup__form popup--hide">
-            <div class="popup__bg"></div>
-            <div class="popup__wrapper">
-              <button class="popup__close-btn">Закрыть</button>
-              <h2 class="visually-hidden">Форма обратной связи</h2>
-              <form class="popup-feedback__form form2" action="" method="post">
-                <label for="email">
-                  <span class="form2__label">Email*</span>
-                  <input class="form2__input" id="email" name="email" type="email" placeholder="Куда прислать ответ по вашему вопросу?" required>
-                </label>
-                <label for="name">
-                  <span class="form2__label">Имя*</span>
-                  <input class="form2__input" id="name" name="name" type="text" maxlength="50" minlength="2" placeholder="Как к вам обращаться" required>
-                </label>
-                <label>
-                  <span class="form2__label">Сообщение*</span>
-                  <textarea class="form2__textarea" name="message" placeholder="О чем вы хотите спросить?" rows="5" required></textarea>
-                </label>
-                <button class="btn btn--secondary" type="submit">Отправить сообщение</button>
-                <p class="form2__caption">Нажимая на кнопку «Отправить сообщение», вы&nbsp;соглашаетесь <a class="link" href="privacy-policy.html" target="_blank">c&nbsp;политикой
-                  обработки персональных данных</a>.</p>
-              </form>
-              <section class="message__wrapper message__wrapper--success message__wrapper--hide">
-                <h2>Ваше сообщение успешно отправлено</h2>
-                <p>Мы отправим ответ на указанный email в ближайшее время</p>
-              </section>
-              <section class="message__wrapper message__wrapper--error message__wrapper--hide">
-                  <h2>Что-то пошло&nbsp;не&nbsp;так</h2>
-                  <p><button class="message__hide-btn link" type="button">Попробуйте еще раз</button> или <a target="_blank" href="/about.html#contacts">свяжитесь с&nbsp;нами другим способом</a></p>
-              </section>
-            </div>
-
-
-          </section>
+         
         </div>
       </div>
     </section>
@@ -318,7 +276,46 @@
     </section>
   </div>
 </main>
+<section class="popup popup-map popup--hide">
+  <div class="popup__bg"></div>
+  <div class="popup__wrapper">
+    <button class="popup__close-btn">Закрыть</button>
+    <h2 class="visually-hidden">Благотворительный фонд на карте Хабаровска</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4257.406019709308!2d135.0675694435066!3d48.47302627450416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5efae9899c3a6eb3%3A0x4eff5e77934ef6d7!2z0YPQuy4g0JTQt9C10YDQttC40L3RgdC60L7Qs9C-LCAyMdCQLCDQpdCw0LHQsNGA0L7QstGB0LosINCl0LDQsdCw0YDQvtCy0YHQutC40Lkg0LrRgNCw0LksIDY4MDAwMA!5e0!3m2!1sru!2sru!4v1601542099071!5m2!1sru!2sru" width="1110" height="442" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+</section>
+<section class="popup popup-feedback popup--form popup--hide">
+  <div class="popup__bg"></div>
+  <div class="popup__wrapper">
+    <button class="popup__close-btn">Закрыть</button>
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <form class="popup-feedback__form form2"  action="/feedback" method="post">
+      <label for="email">
+        <span class="form2__label">Email*</span>
+        <input class="form2__input" id="email" name="email" type="email" placeholder="Куда прислать ответ по вашему вопросу?" required>
+      </label>
+      <label for="name">
+        <span class="form2__label">Имя*</span>
+        <input class="form2__input" id="name" name="name" type="text" maxlength="50" minlength="2" placeholder="Как к вам обращаться" required>
+      </label>
+      <label>
+        <span class="form2__label">Сообщение*</span>
+        <textarea class="form2__textarea" name="message" placeholder="О чем вы хотите спросить?" rows="5" required></textarea>
+      </label>
+      <button class="btn btn--secondary" type="submit">Отправить сообщение</button>
+      <p class="form2__caption">Нажимая на кнопку «Отправить сообщение», вы&nbsp;соглашаетесь <a class="link" href="privacy-policy.html" target="_blank">c&nbsp;политикой
+        обработки персональных данных</a>.</p>
+    </form>
+    <section class="message__wrapper message__wrapper--success message__wrapper--hide">
+      <h2>Ваше сообщение успешно отправлено</h2>
+      <p>Мы отправим ответ на указанный email в ближайшее время</p>
+    </section>
+    <section class="message__wrapper message__wrapper--error message__wrapper--hide">
+      <h2>Что-то пошло&nbsp;не&nbsp;так</h2>
+      <p><button class="message__hide-btn link" type="button">Попробуйте еще раз</button> или <a target="_blank" href="/about.html#contacts">свяжитесь с&nbsp;нами другим способом</a></p>
+    </section>
+  </div>
+</section>
 @@include('html-blocks/_footer.html')
-<script src="js/bundle.js"></script>
 </body>
 </html>

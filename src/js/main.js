@@ -5,10 +5,18 @@ import {setHeader} from "./components/header";
 import {FormFixed} from "./components/form-fixed";
 import {setAbout} from "./pages/about";
 import {setAnimationScroll} from "./utils/anchor-animation-scroll";
+import {setProjectPage} from "./pages/projects";
+import {setPolyfills} from "./utils/polyfills";
+import {templateContent} from "./utils/polyfills";
+import {PopupUploadForm} from "./components/popup-upload-form";
+
+setPolyfills();
+
 
 //настройка хедера
 setBurger();
 setHeader();
+
 
 // настройка плавной прокрутки к якорям
 setAnimationScroll();
@@ -35,5 +43,12 @@ if (formElement) {
   const formFixed = new FormFixed(formElement);
 }
 
-// настройка страницы О нас
+// настройка страниц
 setAbout();
+setProjectPage();
+
+// настройка всплывашек с формой
+const popupsWithFormElements = document.querySelectorAll('.popup--form');
+const popupsWithForm = Array.from(popupsWithFormElements).map((popupElement) => {
+  return new PopupUploadForm(popupElement);
+});

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: flex-start;
   height: 40px;
-  border: 1px solid $green;
+  border: 1px solid $blue;
   border-radius: 10px;
   background-color: $white;
   align-self: center;
@@ -19,7 +19,7 @@
     @include reset;
   }
   & label:hover {
-    color: $green;
+    color: $blue;
   }
   & .toggle-indicator {
     box-sizing: border-box;
@@ -35,11 +35,11 @@
     @media screen and (max-width:450px) {
       margin-bottom: 10px;
       background-color: $white;
-      border: 1px solid $green;
+      border: 1px solid $blue;
     }
   }
   & input:checked + .toggle-indicator {
-    background-color: $green;
+    background-color: $blue;
     color: $white;
   }
   & input:focus + .toggle-indicator {
