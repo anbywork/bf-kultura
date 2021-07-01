@@ -2,25 +2,24 @@
 .payment.inner-page {
   display: flex;
   flex-direction: column;
-  background-color: $light-grey;
   min-height: 1100px;
-  @media screen and (max-width:767px){
+  @media screen and (max-width: 767px) {
     min-height: auto;
   }
-
+  
 }
 
 .payment .page-wrapper {
   //@media screen and (max-width:1024px) {
   //  width: 960px;
   //}
-  @media screen and (max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     //width: 700px;
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
   }
-  @media screen and (max-width: 350px){
+  @media screen and (max-width: 350px) {
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
@@ -31,6 +30,7 @@
   text-align: center;
 }
 
+
 .payment__list {
   position: relative;
   @include reset-list;
@@ -39,14 +39,14 @@
   justify-content: space-between;
   margin: 0 auto;
   box-sizing: border-box;
-
-  @media screen and (min-width: 1280px){
+  
+  @media screen and (min-width: 1280px) {
     width: 1065px;
   }
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     width: 100%;
   }
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -56,15 +56,15 @@
   @include reset;
   width: 19%;
   flex-shrink: 1;
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     width: 100%;
   }
 }
 
 
-
 .payment__list-btn {
   @include reset;
+  @include shadow;
   position: relative;
   border: none;
   display: flex;
@@ -72,16 +72,17 @@
   box-shadow: none;
   box-sizing: border-box;
   background-color: transparent;
-  border-radius: 10px;
   width: 197px;
   height: 165px;
+  
   &:not(:last-child) {
     margin-right: 10px;
   }
-  @media screen and (max-width: 1280px){
+  
+  @media screen and (max-width: 1280px) {
     width: 176px;
   }
-  @media screen and (max-width: 1023px){
+  @media screen and (max-width: 1023px) {
     //width: 130px;
     min-width: 130px;
     width: 100%;
@@ -90,23 +91,23 @@
     flex-grow: 1;
     flex-shrink: 1;
   }
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     width: 100%;
     height: 70px;
     margin-bottom: 10px;
   }
-
+  
   &:hover,
   &:focus,
-  &--active{
+  &--active {
     outline: none;
-    box-shadow: 0 0 0 1px $green;
-
+    box-shadow: 0 0 0 1px $violet;
+    
     & span {
-      color: $green;
+      color: $violet;
     }
   }
-
+  
   &::after {
     content: '';
     position: absolute;
@@ -118,7 +119,7 @@
     background-image: url("/img/sprite.svg");
     background-repeat: no-repeat;
     background-position-y: -59px;
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       top: 10px;
       left: 10px;
       width: 50px;
@@ -128,34 +129,39 @@
       background-position-y: -41px;
     }
   }
+  
   &--online::after {
     background-position-x: 0;
   }
+  
   &--app::after {
     background-position-x: -80px;
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       background-position-x: -57px;
     }
   }
+  
   &--acc::after {
     background-position-x: -160px;
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       background-position-x: -114px;
     }
   }
+  
   &--cash::after {
     background-position-x: -240px;
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       background-position-x: -171px;
     }
   }
+  
   &--atm::after {
     background-position-x: -320px;
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       background-position-x: -228px;
     }
   }
-
+  
   &::before {
     position: absolute;
     bottom: 0;
@@ -169,20 +175,21 @@
     content: '';
   }
 }
+
 .payment__list-btn span {
-    position: absolute;
-    top: 0;
-    display: flex;
-    box-sizing: border-box;
-    align-items: flex-end;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 10px 10px 20px;
-    background-color: $white;
-    border-radius: 10px;
-    text-align: center;
-  @media screen and (max-width: 767px){
+  position: absolute;
+  top: 0;
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 20px;
+  background-color: $white;
+  border-radius: 12px;
+  text-align: center;
+  @media screen and (max-width: 767px) {
     justify-content: flex-start;
     align-items: center;
     padding: 10px 10px 10px 80px;
@@ -199,7 +206,7 @@
   position: absolute;
   margin-top: 50px;
   margin-bottom: 50px;
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 30px;
   }
 }
@@ -210,39 +217,39 @@
 .payment-content-atm {
   left: 0;
   width: 100%;
-  @media screen and (max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     box-sizing: border-box;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
   }
-
-  @media screen and (max-width: 767px){
+  
+  @media screen and (max-width: 767px) {
     position: static;
     margin-top: 40px;
     width: 100%;
   }
 }
-
 
 
 .payment-content-app {
   left: -80px;
-  @media screen and (max-width:1280px) {
+  @media screen and (max-width: 1280px) {
     //width: 960px;
     width: 100%;
     left: 0;
   }
-  @media screen and (max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     left: 0;
     width: 100%;
   }
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     position: static;
     margin-top: 40px;
   }
 }
+
 .payment__content-title {
   display: flex;
   justify-content: space-between;
@@ -250,32 +257,48 @@
   margin-bottom: 40px;
   padding-bottom: 20px;
   border-bottom: 1px solid #C5DAEF;
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
   }
 }
+
 .payment__content-title h2 {
   @include reset;
   font-weight: 500;
   font-size: 20px;
   line-height: 25px;
   color: rgba($black, 0.5);
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 20px;
+  }
+}
+
+.payment {
+  @media screen and (min-width: $ipadpro) {
+    & .form-payment {
+      width: 100%;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+    & .form-payment__row {
+      flex-direction: row;
+    }
   }
 }
 
 .payment-content-acc__download-link {
   font-size: 20px;
   line-height: 25px;
-  color: $green;
+  color: $violet;
 }
 
 .payment-content-app__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
     justify-content: space-between;
   }
@@ -288,35 +311,36 @@
   margin-right: 50px;
   width: 700px;
   height: auto;
-  @media screen and (max-width:1279px) {
+  @media screen and (max-width: 1279px) {
     width: 530px;
     flex-grow: 1;
   }
-  @media screen and (max-width:1023px) {
+  @media screen and (max-width: 1023px) {
     min-width: 300px;
     width: auto;
     flex-shrink: 1;
     flex-grow: 1;
     margin-right: 20px;
   }
-
-  @media screen and (max-width:767px) {
+  
+  @media screen and (max-width: 767px) {
     width: 100%;
     margin-right: 0;
     margin-bottom: 40px;
   }
+  
   & picture,
   & img {
     width: 700px;
     overflow: hidden;
     border-radius: 5px;
-    @media screen and (max-width:1279px) {
+    @media screen and (max-width: 1279px) {
       width: 530px;
     }
-    @media screen and (max-width:1023px) {
+    @media screen and (max-width: 1023px) {
       width: 100%;
     }
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
       width: 100%;
     }
   }
@@ -330,21 +354,22 @@
   padding-left: 80px;
   width: 700px;
   height: auto;
-  @media screen and (max-width:1280px) {
+  @media screen and (max-width: 1280px) {
     width: 530px;
   }
-  @media screen and (max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     width: 300px;
     justify-content: flex-start;
     padding-left: 30px;
   }
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     justify-content: center;
     width: 100%;
     margin-right: 0;
     margin-bottom: 40px;
     padding-left: 0;
   }
+  
   & picture,
   & img {
     width: 225px;
@@ -353,7 +378,6 @@
     box-sizing: border-box;
   }
 }
-
 
 
 .payment-content-app__img--hide {
@@ -371,46 +395,57 @@
   width: 374px;
   height: 40px;
   margin-bottom: 30px;
-  border: 1px solid $green;
+  border: 1px solid $blue;
   border-radius: 10px;
   background-color: $white;
-  @media screen and (max-width:767px) {
-
+  @media screen and (max-width: 767px) {
+  
   }
-  @media screen and (max-width:450px) {
+  @media screen and (max-width: 450px) {
     border: none;
     flex-direction: column;
     background-color: transparent;
     height: auto;
   }
+  
   & li {
     @include reset;
+    width: 50%;
   }
+  
   & label:hover {
     color: $green;
   }
+  
   & .toggle-indicator {
     box-sizing: border-box;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
     height: 40px;
     padding: 9px 30px;
     text-align: center;
-    @media screen and (max-width:767px) {
+    font-size: 12px;
+    line-height: 16px;
+    @media screen and (max-width: 767px) {
       padding: 9px 25px;
     }
-    @media screen and (max-width:450px) {
+    @media screen and (max-width: 450px) {
       margin-bottom: 10px;
       background-color: $white;
-      border: 1px solid $green;
+      border: 1px solid $blue;
     }
   }
+  
   & input:checked + .toggle-indicator {
-    background-color: $green;
+    background-color: $blue;
     color: $white;
   }
+  
   & input:focus + .toggle-indicator {
-    background-color: $blue;
+    background-color: $violet;
   }
 }
 
@@ -422,6 +457,7 @@
 .payment-content-app__item {
   display: flex;
   align-items: center;
+  
   &:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -436,7 +472,7 @@
   height: 40px;
   border-radius: 50%;
   text-align: center;
-  background-color: rgba($green, 0.1);
+  background-color: rgba($violet, 0.1);
 }
 
 .payment-content-app__link--hide {
@@ -445,29 +481,34 @@
 
 .payment-content-acc__data-table {
   border: none;
+  
   & td {
-    padding-bottom: 20px;
+    padding-bottom: 12px;
+    
     &:first-child {
       width: 200px;
       font-weight: 300;
       color: rgba($black, 0.7);
-      @media screen and (max-width:767px) {
+      @media screen and (max-width: 767px) {
         width: 100%;
         padding: 0;
       }
     }
+    
     &:last-child {
-      @media screen and (max-width:767px) {
+      @media screen and (max-width: 767px) {
         padding: 0;
         padding-bottom: 10px;
       }
     }
-    @media screen and (max-width:767px) {
+    
+    @media screen and (max-width: 767px) {
       padding-bottom: 0;
     }
   }
+  
   & tr {
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
       display: flex;
       flex-direction: column;
     }
@@ -475,13 +516,14 @@
 }
 
 .payment-content-cash__wrapper,
-.payment-content-atm__wrapper{
+.payment-content-atm__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }
+  
   & picture,
   & img {
     width: 630px;
@@ -499,6 +541,7 @@
       margin-right: 0;
     }
   }
+  
   & p {
     width: 380px;
     font-weight: 300;

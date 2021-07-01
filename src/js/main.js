@@ -7,8 +7,10 @@ import {setAbout} from "./pages/about";
 import {setAnimationScroll} from "./utils/anchor-animation-scroll";
 import {setProjectPage} from "./pages/projects";
 import {setPolyfills} from "./utils/polyfills";
-import {templateContent} from "./utils/polyfills";
 import {PopupUploadForm} from "./components/popup-upload-form";
+import {setPaymentPage} from "./pages/payment";
+import {setRecurring} from "./utils/recurring";
+import {setFormAmount} from "./utils/form-amount";
 
 setPolyfills();
 
@@ -16,6 +18,10 @@ setPolyfills();
 //настройка хедера
 setBurger();
 setHeader();
+
+//настройка формы
+setRecurring();
+setFormAmount();
 
 
 // настройка плавной прокрутки к якорям
@@ -46,6 +52,7 @@ if (formElement) {
 // настройка страниц
 setAbout();
 setProjectPage();
+setPaymentPage();
 
 // настройка всплывашек с формой
 const popupsWithFormElements = document.querySelectorAll('.popup--form');

@@ -22,37 +22,15 @@
         <div>
           <legend class="form__legend">Сумма пожертвования:</legend>
           <span class="form__input--rouble">
-          <input class="form__input form-payment__amount-input" type="number" name="amountAnother" placeholder="Другая сумма" min="1" value="300">
+          <input class="form__input form-payment__amount-input" type="number" name="amount" placeholder="Введите сумму" min="1" value="300">
         </span>
           <ul class="form-payment__amount-value">
-            <li>
-              <label>
-                <input type="radio" class="visually-hidden" name="amount-value" value="100">
-                <span class="form__label-btn form__label-btn--orange">100 ₽</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" class="visually-hidden" name="amount-value" value="300" checked>
-                <span class="form__label-btn form__label-btn--green">300 ₽</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" class="visually-hidden" name="amount-value" value="500">
-                <span class="form__label-btn form__label-btn--blue">500 ₽</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" class="visually-hidden" name="amount-value" value="700">
-                <span class="form__label-btn form__label-btn--violet">700 ₽</span>
-              </label>
-            </li>
+            <li><button class="form__label-btn form__label-btn--orange" type="button">100 ₽</button></li>
+            <li><button class="form__label-btn form__label-btn--green" type="button">300 ₽</button></li>
+            <li><button class="form__label-btn form__label-btn--blue" type="button">500 ₽</button></li>
+            <li><button class="form__label-btn form__label-btn--violet" type="button">700 ₽</button></li>
           </ul>
         </div>
-  
-  
       </fieldset>
     </div>
     
@@ -72,7 +50,6 @@
       <img src="/img/ps-signs.svg" alt="Принимаем платежи: Visa, Master Card, МИР, Apple Pay, Google Pay" width="235" height="21">
     </div>
   </div>
-  <input type="text" hidden name="amount">
   <input type="text" hidden name="first_name">
   <input type="text" hidden name="last_name">
   <input type="text" hidden name="patronymic">

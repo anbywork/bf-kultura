@@ -95,8 +95,8 @@
     for(let i = 0; i < data.length; i++) {
       const newsItem = templateContent(document.querySelector('#news-item-template'));
       newsItem.querySelector('a').setAttribute('href', '/news/' + data[i].slug);
-      newsItem.querySelector('.news-item__img img').setAttribute('src', data[i].thumbnail_image);
-      newsItem.querySelector('.news-item__img source').setAttribute('srcset', data[i].thumbnail_image);
+      newsItem.querySelector('.news-item__img').setAttribute('src', data[i].thumbnail_image);
+      newsItem.querySelector('.news-item__img').setAttribute('srcset', data[i].thumbnail_image);
       let [year, month, day] = data[i].date_time.split(' ')[0].split('-');
       let date = new Date(year, month-1, day).toLocaleString("ru", optionsDate);
       newsItem.querySelector('.news-item__date').textContent = date;
