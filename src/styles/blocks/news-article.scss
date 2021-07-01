@@ -1,8 +1,28 @@
+.news-article {
+  @include shadow;
+  margin: 40px auto 80px;
+  max-width: 600px !important;
+  overflow: hidden;
+}
+
+
+
 .news-article__header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 30px;
+}
+
+.news-article__text {
+  padding: 8px;
+  @media screen and (min-width: $iphone11){
+    padding: 12px;
+  }
+  @media screen and (min-width: $ipad){
+    padding: 24px;
+  }
 }
 
 .news-article__date {
