@@ -1,7 +1,8 @@
 .callout {
-  background: rgba($green, 0.05);
+  @include shadow;
+  
   padding: 15px;
-  border: 1px solid $green;
+  border: 1px solid $violet;
   box-sizing: border-box;
   border-radius: 15px;
 }

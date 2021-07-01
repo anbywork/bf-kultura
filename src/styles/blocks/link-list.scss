@@ -7,12 +7,10 @@
 
 .link-list__item > a {
   @include reset-list;
+  @include shadow;
   display: flex;
   flex-direction: column;
   padding: 14px 20px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  background-color: $light-grey;
 }
 
 p + ul.link-list {
