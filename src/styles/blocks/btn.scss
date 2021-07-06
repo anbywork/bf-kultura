@@ -79,18 +79,22 @@ a.btn--secondary {
   }
 }
 
-.btn--red {
+.btn--red,
+a.btn--red {
   background-color: $orange;
   color: $white;
   &:hover {
     background-color: darken($orange, 0.05);
+    color: $white;
   }
   &:focus {
     outline: none;
     background-color: darken($orange, 0.1);
+    color: $white;
   }
   &:active {
     background-color: darken($orange, 0.15);
+    color: $white;
   }
 }
 

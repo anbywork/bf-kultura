@@ -148,6 +148,7 @@ ol li {
 
 
 table {
+  @include shadow;
   margin-top: 20px;
   width: 100%;
   border-spacing: 4px;
@@ -161,7 +162,7 @@ tr {
 }
 
 tr:nth-child(2n+1) > td {
-  background-color: rgba($white, 0.8);
+  background-color: $light-grey;
 }
 
 td {
@@ -172,8 +173,14 @@ td {
   line-height: 18px;
   @media screen and (max-width:767px){
     padding-bottom: 5px;
-    &:last-child {
-      padding-bottom: 15px;
+    &:first-child {
+      padding: 8px 12px 4px;
+      border-radius: 8px 8px 0 0;
+    }
+    & + td {
+      padding: 0px 12px 8px;
+      border-radius: 0 0 8px 8px;
+      font-weight: bold;
     }
   }
 }

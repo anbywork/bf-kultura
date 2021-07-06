@@ -103,12 +103,11 @@ export class UploadField {
     evt.preventDefault();
     evt.stopPropagation();
 
-    let dx = evt.pageX - uploadField.left;
-    let dy = evt.pageY - uploadField.top;
-    if ((dx < 0) || (dx > uploadField.width) || (dy < 0) || (dy > uploadField.height)) {
-      uploadFieldBlur();
+    let dx = evt.pageX - this.uploadField.left;
+    let dy = evt.pageY - this.uploadField.top;
+    if ((dx < 0) || (dx > this.uploadField.width) || (dy < 0) || (dy > this.uploadField.height)) {
+      this.uploadFieldBlur();
     }
-    ;
   }
 
   uploadFieldDropHandler(evt) {
@@ -188,9 +187,6 @@ export class UploadField {
   }
 
   isIE() {
-    if (navigator.userAgent.indexOf("Trident") != -1) {
-      return true;
-    }
-    return false;
+    return navigator.userAgent.indexOf("Trident") !== -1;
   }
 }

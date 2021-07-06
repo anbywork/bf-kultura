@@ -1,5 +1,5 @@
 .message {
-  background-color: $light-grey;
+  background-color: $white;
   display: flex;
   padding: 80px;
   border-radius: 15px;
@@ -19,7 +19,7 @@
   padding: 50px;
   text-align: center;
 
-  border: 1px solid #3276CF;
+  border: 1px solid $green;
   box-sizing: border-box;
   border-radius: 15px;
   &--hide {
@@ -28,6 +28,10 @@
   @media screen and (max-width: 767px) {
     padding: 30px 10px;
   }
+}
+
+.message--error .message__wrapper {
+  border: 1px solid $orange;
 }
 
 
@@ -61,6 +65,7 @@
 }
 
 .message__hide-btn {
+  cursor: pointer;
   @include reset;
   display: inline;
   background-color: transparent;

@@ -4,15 +4,15 @@ export const uploadForm = (form, formWrapper, messageClassElem) => {
   xhr.addEventListener('load', () =>{
     hideForm(form);
     if (xhr.status != 200) {
-      showMessage(messageClassElem + '--error', formWrapper, messageClassElem);
+      showMessage(messageClassElem + '--error', formWrapper, messageClassElem, form);
     } else {
-      showMessage(messageClassElem + '--success', formWrapper, messageClassElem);
+      showMessage(messageClassElem + '--success', formWrapper, messageClassElem, form);
     }
   });
 
   xhr.addEventListener('error', () => {
     hideForm(form);
-    showMessage(messageClassElem + '--error', formWrapper, messageClassElem);
+    showMessage(messageClassElem + '--error', formWrapper, messageClassElem, form);
   })
 
   let URL = form.getAttribute('action');
@@ -20,32 +20,27 @@ export const uploadForm = (form, formWrapper, messageClassElem) => {
 
   xhr.open('POST', URL);
   xhr.responseType = 'json';
-  //xhr.send(formData);
-  debugger;
-  //todo: вернуть отправку формы
-  hideForm(form);
-  showMessage(messageClassElem + '--error', formWrapper, messageClassElem);
+  xhr.send(formData);
+  // hideForm(form);
+  // showMessage(messageClassElem + '--error', formWrapper, messageClassElem, form);
 
 }
 
-function showMessage(messageClass, formWrapper, messageClassElem) {
-  let message = formWrapper.querySelector('.' + messageClass);
+function showMessage(messageClass, formWrapper, messageClassElem, form) {
+  const message = formWrapper.querySelector('.' + messageClass);
   message.classList.remove(messageClassElem + '--hide');
-  let timeForShowMessage = 10000;
-  // setTimeout(hideMessage, timeForShowMessage, message);
-  // setTimeout(showForm, timeForShowMessage, form);
 
-  let messageHideBtn = message.querySelector('.message__hide-btn');
+  const messageHideBtn = message.querySelector('.message__hide-btn');
   if (messageHideBtn) {
-    messageHideBtn.addEventListener('click', () => {
-      hideMessage(this.closest('.' + messageClass));
+    messageHideBtn.addEventListener('click', (evt) => {
+      hideMessage(evt.target.closest('.' + messageClass));
       showForm(form);
     });
   }
 }
 
-function hideMessage(message, messageClassElem) {
-  message.classList.add(messageClassElem + '--hide');
+function hideMessage(message) {
+  message.classList.add('message--hide');
 }
 
 function hideForm(form) {

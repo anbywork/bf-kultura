@@ -11,6 +11,8 @@ import {PopupUploadForm} from "./components/popup-upload-form";
 import {setPaymentPage} from "./pages/payment";
 import {setRecurring} from "./utils/recurring";
 import {setFormAmount} from "./utils/form-amount";
+import {setNewsPage} from "./pages/news-page";
+import {fadeInAnimate} from "./utils/fade-in-animate";
 
 setPolyfills();
 
@@ -28,11 +30,7 @@ setFormAmount();
 setAnimationScroll();
 
 // настройка анимации появления блоков
-const fadeInElements = document.querySelectorAll('.fade-out');
-const fadeIns = [];
-for (let elem of Array.from(fadeInElements)) {
-  fadeIns.push(new FadeIn(elem));
-}
+fadeInAnimate();
 
 // настройка маски для поля типа phone
 const phoneInputs = document.querySelectorAll('input[type=tel]');
@@ -53,6 +51,7 @@ if (formElement) {
 setAbout();
 setProjectPage();
 setPaymentPage();
+setNewsPage();
 
 // настройка всплывашек с формой
 const popupsWithFormElements = document.querySelectorAll('.popup--form');

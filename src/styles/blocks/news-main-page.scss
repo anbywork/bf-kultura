@@ -5,10 +5,12 @@
   flex-direction: column;
   border-radius: 12px;
   overflow: hidden;
-  min-width: calc(100% - 10px);
+  max-width: 320px;
+  min-width: 300px;
   
   @media screen and (min-width: $ipad) {
     min-width: auto;
+    max-width: none;
     height: 154px;
   }
   

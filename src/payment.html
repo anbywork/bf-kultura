@@ -3,124 +3,69 @@
 @@include('html-blocks/_head.html')
 <body>
 @@include('html-blocks/_header.html')
-<main class="inner-page payment">
-  <div class="page-wrapper">
-    <h1 class="inner-page__title payment__title">Как пожертвовать</h1>
+<main class="inner-page payment container">
+    <header class="payment__header">
+      <h1 class="inner-page__title payment__title">Как пожертвовать</h1>
+      <ul class="payment__toggle-list">
+        <li>
+          <label class="payment__toggle">
+            <input class="visually-hidden" type="radio" name="payment-toggle" value="online" data-id="online" checked>
+            <span class="payment__toggle-label">Онлайн</span>
+          </label>
+        </li>
+        <li>
+          <label class="payment__toggle">
+            <input class="visually-hidden" type="radio" name="payment-toggle" data-id="account" value="account">
+            <span class="payment__toggle-label">На расчетный счет</span>
+          </label>
+        </li>
+      </ul>
+    </header>
+    
     <ul class="payment__list">
-      <li class="payment__list-item">
-        <button class="payment__list-btn payment__list-btn--online payment__list-btn--active"><span>Онлайн</span></button>
-        <div class="payment__content payment-content-online">
-          <div class="payment__content-title"><h2>Заполните форму</h2></div>
-          @@include('html-blocks/_form.html')
-        </div>
+      <li id="online" class="payment__list-item">
+        @@include('html-blocks/_form.html')
       </li>
-      <li class="payment__list-item">
-        <button class="payment__list-btn payment__list-btn--app"><span>Интернет- или <br> Мобильный банк</span></button>
-        <div class="payment__content payment-content-app">
-          <div class="payment-content-app__wrapper">
-            <div class="payment-content-app__img">
-              <div class="payment-content-app__img-desktop">
-                <img src="/img/content/desktop.gif" alt="" width="706">
-              </div>
-              <div class="payment-content-app__img-mobile payment-content-app__img--hide">
-                <img src="/img/content/mobile.gif" alt="" width="225">
-              </div>
-            </div>
-            <div class="payment-content-app__left-side">
-              <ul class="payment-content-app__toggle">
-                <li>
-                  <label>
-                    <input class="payment-content-app__toggle--desktop visually-hidden" type="radio" name="app" checked>
-                    <span class="toggle-indicator">Интернет-банк</span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input class="payment-content-app__toggle--mobile visually-hidden" type="radio" name="app">
-                    <span class="toggle-indicator">Восточный Мобайл</span>
-                  </label>
-                </li>
-              </ul>
-              <ul class="payment-content-app__text">
-                <li class="payment-content-app__item"><span class="payment-content-app__number">1</span><span>Откройте раздел <b>«Переводы»</b></span></li>
-                <li class="payment-content-app__item"><span class="payment-content-app__number">2</span><span>Выберите пункт <b>«Благотворительный фонд»</b></span></li>
-                <li class="payment-content-app__item"><span class="payment-content-app__number">3</span><span>Укажите <b>счет</b>, с которого хотите оплатить</span></li>
-                <li class="payment-content-app__item"><span class="payment-content-app__number">4</span><span>Укажите <b>назначение платежа</b>, например “Благотворительность”</span></li>
-                <li class="payment-content-app__item"><span class="payment-content-app__number">5</span><span>И <b>сумму</b> перевода</span></li>
-              </ul>
-              <p class="payment-content-app__link--desktop"><a href="https://online.vostbank.ru/app/" target="_blank">Откройте интернет-банк</a></p>
-              <p class="payment-content-app__link--mobile payment-content-app__link--hide"><a href="https://www.vostbank.ru/client/transfer/mobile-bank/" target="_blank">Скачать мобильный банк «Восточный Мобайл»</a></p>
-            </div>
-          </div>
-
-
-        </div>
-      </li>
-      <li class="payment__list-item">
-        <button class="payment__list-btn payment__list-btn--acc"><span>На расчетный <br>счет</span></button>
-        <div class="payment__content payment-content-acc">
-          <div class="payment__content-title">
-            <h2>Реквизиты благотворительного фонда «Восточный»</h2>
-            <a class="payment-content-acc__download-link link" href="/docs/%D0%A0%D0%B5%D0%BA%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D1%8B%20%D0%91%D0%A4%20%C2%AB%D0%92%D0%BE%D1%81%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B9%C2%BB.pdf" target="_blank">Скачать реквизиты</a>
-          </div>
-          <table class="payment-content-acc__data-table">
-            <tr>
-              <td>БИК</td>
-              <td>040813886</td>
-            </tr>
-            <tr>
-              <td>Банк</td>
-              <td>Дальневосточный филиал ПАО КБ «Восточный»</td>
-            </tr>
-            <tr>
-              <td>Кор.счет</td>
-              <td>30101810600000000886</td>
-            </tr>
-            <tr>
-              <td>Расчетный счет</td>
-              <td>40703810002150000199</td>
-            </tr>
-            <tr>
-              <td>ИНН</td>
-              <td>2721176340</td>
-            </tr>
-            <tr>
-              <td>КПП</td>
-              <td>272101001</td>
-            </tr>
-            <tr>
-              <td>Получатель перевода</td>
-              <td>БФ «Восточный»</td>
-            </tr>
-            <tr>
-              <td>Адрес</td>
-              <td>680000, г. Хабаровск, ул. Дзержинского 21 а, корп. 2</td>
-            </tr>
-            <tr>
-              <td>Назначение платежа</td>
-              <td>Благотворительное пожертвование на ведение уставной деятельности фонда</td>
-            </tr>
-          </table>
-        </div>
-
-      </li>
-      <li class="payment__list-item">
-        <button class="payment__list-btn payment__list-btn--cash"><span>Наличными</span></button>
-        <div class="payment__content payment-content-cash">
-          <div class="payment-content-cash__wrapper">
-            <img src="/img/content/домик-копилка.jpg" srcset="/img/content/домик-копилка@2x.jpg 2x" width="631" height="456" alt="">
-            <p>Домики-копилки Благотворительного фонда расположены <a class="link" href="https://www.vostbank.ru/office/" target="_blank">в&nbsp;кассах всех&nbsp;отделений банка&nbsp;«Восточный»</a>.</p>
-          </div>
-        </div>
-      </li>
-      <li class="payment__list-item">
-        <button class="payment__list-btn payment__list-btn--atm"><span>Через <br>терминал</span></button>
-        <div class="payment__content payment-content-atm">
-          <div class="payment-content-atm__wrapper">
-            <img src="/img/content/atm.jpg" srcset="/img/content/atm@2x.jpg 2x" width="631" height="456" alt="">
-            <p><a class="link" href="https://www.vostbank.ru/terminals/" target="_blank">Список адресов платёжных терминалов банка «Восточный»</a></p>
-          </div>
-        </div>
+      <li id="account" class="payment__list-item payment__list-item--hidden">
+        <table class="payment__table">
+          <tr>
+            <td>БИК</td>
+            <td>040813886</td>
+          </tr>
+          <tr>
+            <td>Банк</td>
+            <td>Дальневосточный филиал ПАО КБ «Восточный»</td>
+          </tr>
+          <tr>
+            <td>Кор.счет</td>
+            <td>30101810600000000886</td>
+          </tr>
+          <tr>
+            <td>Расчетный счет</td>
+            <td>40703810002150000199</td>
+          </tr>
+          <tr>
+            <td>ИНН</td>
+            <td>2721176340</td>
+          </tr>
+          <tr>
+            <td>КПП</td>
+            <td>272101001</td>
+          </tr>
+          <tr>
+            <td>Получатель перевода</td>
+            <td>БФ «Восточный»</td>
+          </tr>
+          <tr>
+            <td>Адрес</td>
+            <td>680000, г. Хабаровск, ул. Дзержинского 21 а, корп. 2</td>
+          </tr>
+          <tr>
+            <td>Назначение платежа</td>
+            <td>Благотворительное пожертвование на ведение уставной деятельности фонда</td>
+          </tr>
+        </table>
+        <a class="payment__download-link link" href="/docs/%D0%A0%D0%B5%D0%BA%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D1%8B%20%D0%91%D0%A4%20%C2%AB%D0%92%D0%BE%D1%81%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B9%C2%BB.pdf" target="_blank">Скачать реквизиты</a>
       </li>
     </ul>
   </div>
